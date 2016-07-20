@@ -3,9 +3,13 @@ Claire chu
 July 20, 2016  
 
 #Case Study 2: Forecasting Chulwalar Exports
+
 1.0 Preperation, import and convert data
+
 1.1 [Import the exports data and the indicators](#id-section1.1)
+
 1.2 [Transforming the data into vectors and time series](#id-section1.2)
+
 <br>
 
 ****************************
@@ -81,37 +85,68 @@ head(ImportedIndicators)
 
 ######The data provided comprises of the following partial data sets:
 IMPORTED AS IS DATA
+
 -Monthly As Is exports 
+
 -Monthly As Is exports of Efak
+
 -Monthly As Is exports of Wuge
+
 -Monthly As Is exports of Etel (Total)
+
 -Monthly As Is exports of blue Etel
+
 -Monthly As Is exports of red Etel
+
 -Yearly As Is exports
 
+
 IMPORTED PLAN DATA
+
 -Monthly Plan exports 
+
 -Monthly Plan exports of Efak
+
 -Monthly Plan exports of Wuge
+
 -Monthly Plan exports of Etel (Total)
+
 -Monthly Plan exports of blue Etel
+
 -Monthly Plan exports of red Etel
+
 -Yearly Plan exports
 
+
+
 IMPORTED INDICATORS
+
 -Change in Exports prices
+
 -Satisfaction index
+
 -Average Temperature
+
 -Birth Index
+
 -Satisfaction index (Independent)
+
 -Total Exports from Urbano
+
 -Globalization Party Members
+
 -Average Export Price
+
 -Etel Production Price index
+
 -Chulwalar Index
+
 -Inflation
+
 -Spending for Chulwalar holidays
+
 -Chulwalar holidays
+
 -Influence of Chulwalar holidays
 
 ****************************
