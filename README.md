@@ -16,11 +16,11 @@ The Prime Minister of Chulwalar has asked us to help him in forecasting the expo
 #Table of Contents
 
 ****************************
-1.0	[Preperation, import and convert data](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+1.0	[Preperation, import and convert data](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section1_Prep/Readme.md)
 
----1.1 [Import the exports data and the indicators](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+---1.1 [Import the exports data and the indicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section1_Prep/Readme.md)
 
----1.2 [Transformation the data into vectors and time series](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+---1.2 [Transformation the data into vectors and time series](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section1_Prep/Readme.md)
 
 2.0 [Analysis of the basic data](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
 
