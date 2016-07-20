@@ -1,0 +1,155 @@
+---
+title: "Preperation, import and convert data"
+author: "Claire chu"
+date: "July 20, 2016"
+output: 
+  html_document:
+    keep_md: yes
+---
+
+#Case Study 2: Forecasting Chulwalar Exports
+1.0 Preperation, import and convert data
+1.1 [Import the exports data and the indicators](#id-section1.1)
+1.2 [Transforming the data into vectors and time series](#id-section1.2)
+<br>
+
+****************************
+######Load the following libraries and packages.
+```{r echo=TRUE, message=FALSE}
+setwd("/Users/macnificent/Desktop")
+library(fpp)
+library(tcltk)
+
+mywait <- function() {
+    tt <- tktoplevel()
+    tkpack( tkbutton(tt, text='Continue', command=function()tkdestroy(tt)),
+        side='bottom')
+    tkbind(tt,'<Key>', function()tkdestroy(tt) )
+
+    tkwait.window(tt)
+}
+```
+
+****************************
+<div id='id-section1.1'/>
+####1.1 Import the exports data and the indicators
+
+```{r}
+ImportedAsIsData <- read.csv("ImportedAsIsDataChulwalar.csv", header = F, sep=";", fill = T)
+
+ImportedPlanData <- read.csv("ImportedPlanDataChulwalar.csv", header = F, sep=";", fill = T)
+
+ImportedIndicators <- read.csv("ImportedIndicatorsChulwalar.csv", header = F, sep=";", fill = T)
+
+head(ImportedAsIsData)
+head(ImportedPlanData)
+head(ImportedIndicators)
+```
+
+######The data provided comprises of the following partial data sets:
+IMPORTED AS IS DATA
+-Monthly As Is exports 
+-Monthly As Is exports of Efak
+-Monthly As Is exports of Wuge
+-Monthly As Is exports of Etel (Total)
+-Monthly As Is exports of blue Etel
+-Monthly As Is exports of red Etel
+-Yearly As Is exports
+
+IMPORTED PLAN DATA
+-Monthly Plan exports 
+-Monthly Plan exports of Efak
+-Monthly Plan exports of Wuge
+-Monthly Plan exports of Etel (Total)
+-Monthly Plan exports of blue Etel
+-Monthly Plan exports of red Etel
+-Yearly Plan exports
+
+IMPORTED INDICATORS
+-Change in Exports prices
+-Satisfaction index
+-Average Temperature
+-Birth Index
+-Satisfaction index (Independent)
+-Total Exports from Urbano
+-Globalization Party Members
+-Average Export Price
+-Etel Production Price index
+-Chulwalar Index
+-Inflation
+-Spending for Chulwalar holidays
+-Chulwalar holidays
+-Influence of Chulwalar holidays
+
+****************************
+<div id='id-section1.2'/>
+####1.2 Transforming the data into vectors and time series 
+
+#####Seperating the Imported As Is Data
+```{r}
+TotalAsIsVector <- c(ImportedAsIsData [2:13,2],ImportedAsIsData [2:13,3],ImportedAsIsData [2:13,4],ImportedAsIsData [2:13,5],ImportedAsIsData [2:13,6],ImportedAsIsData [2:13,7])
+EfakAsIsVector <- c(ImportedAsIsData [16:27,2],ImportedAsIsData [16:27,3],ImportedAsIsData [16:27,4],ImportedAsIsData [16:27,5],ImportedAsIsData [16:27,6],ImportedAsIsData [16:27,7])
+WugeAsIsVector <- c(ImportedAsIsData [30:41,2],ImportedAsIsData [30:41,3],ImportedAsIsData [30:41,4],ImportedAsIsData [30:41,5],ImportedAsIsData [30:41,6],ImportedAsIsData [30:41,7])
+TotalEtelAsIsVector <- c(ImportedAsIsData [44:55,2],ImportedAsIsData [44:55,3],ImportedAsIsData [44:55,4],ImportedAsIsData [44:55,5],ImportedAsIsData [44:55,6],ImportedAsIsData [44:55,7])
+BlueEtelAsIsVector <- c(ImportedAsIsData [58:69,2],ImportedAsIsData [58:69,3],ImportedAsIsData [58:69,4],ImportedAsIsData [58:69,5],ImportedAsIsData [58:69,6],ImportedAsIsData [58:69,7])
+RedEtelAsIsVector <- c(ImportedAsIsData [72:83,2],ImportedAsIsData [72:83,3],ImportedAsIsData [72:83,4],ImportedAsIsData [72:83,5],ImportedAsIsData [72:83,6],ImportedAsIsData [72:83,7])
+YearAsIsVector <- c(ImportedAsIsData [86,2],ImportedAsIsData [86,3],ImportedAsIsData [86,4],ImportedAsIsData [86,5],ImportedAsIsData [86,6],ImportedAsIsData [86,7])
+TotalAsIsVector_2014 <- c(ImportedAsIsData[2:13,8])
+```
+#####Converting the Imported As Is vectors into a time series
+```{r}
+TotalAsIs<- ts(TotalAsIsVector , start=c(2008,1), end=c(2013,12), frequency=12)
+EfakAsIs <- ts(EfakAsIsVector , start=c(2008,1), end=c(2013,12), frequency=12)
+WugeAsIs <- ts(WugeAsIsVector, start=c(2008,1), end=c(2013,12), frequency=12)
+TotalEtelAsIs<- ts(TotalEtelAsIsVector, start=c(2008,1), end=c(2013,12), frequency=12)
+BlueEtelAsIs <- ts(BlueEtelAsIsVector, start=c(2008,1), end=c(2013,12), frequency=12)
+RedEtelAsIs <- ts(RedEtelAsIsVector, start=c(2008,1), end=c(2013,12), frequency=12)
+YearAsIs <- ts(YearAsIsVector, start=c(2008,1), end=c(2013,12), frequency=12)
+TotalAsIs_2014 <- ts(TotalAsIsVector_2014, start=c(2014,1), end=c(2014,12), frequency=12)
+```
+
+#####Separating the Imported Plan Data
+```{r}
+PlanVector <- c(ImportedPlanData[2:13,2],ImportedPlanData[2:13,3],ImportedPlanData[2:13,4],ImportedPlanData[2:13,5],ImportedPlanData[2:13,6],ImportedPlanData[2:13,7])
+EfakPlanVector <- c(ImportedPlanData[16:27,2],ImportedPlanData[16:27,3],ImportedPlanData[16:27,4],ImportedPlanData[16:27,5],ImportedPlanData[16:27,6],ImportedPlanData[16:27,7])
+WugePlanVector <- c(ImportedPlanData[30:41,2],ImportedPlanData[30:41,3],ImportedPlanData[30:41,4],ImportedPlanData[30:41,5],ImportedPlanData[30:41,6],ImportedPlanData[30:41,7])
+TotalEtelPlanVector <- c(ImportedPlanData[44:55,2],ImportedPlanData[44:55,3],ImportedPlanData[44:55,4],ImportedPlanData[44:55,5],ImportedPlanData[44:55,6],ImportedPlanData[44:55,7])
+BlueEtelPlanVector <- c(ImportedPlanData[58:69,2],ImportedPlanData[58:69,3],ImportedPlanData[58:69,4],ImportedPlanData[58:69,5],ImportedPlanData[58:69,6],ImportedPlanData[58:69,7])
+RedEtelPlanVector <- c(ImportedPlanData[72:83,2],ImportedPlanData[72:83,3],ImportedPlanData[72:83,4],ImportedPlanData[72:83,5],ImportedPlanData[72:83,6],ImportedPlanData[72:83,7])
+YearPlanVector <- c(ImportedPlanData[86,2],ImportedPlanData[86,3],ImportedPlanData[86,4],ImportedPlanData[86,5],ImportedPlanData[86,6],ImportedPlanData[86,7])
+PlanVector_2014 <- c(ImportedPlanData[2:13,8])
+```
+#####Converting the Imported Plan Vectors into a time series
+```{r}
+TotalPlan <- ts(PlanVector , start=c(2008,1), end=c(2013,12), frequency=12)
+EfakPlan <- ts(EfakPlanVector, start=c(2008,1), end=c(2013,12), frequency=12)
+WugePlan <- ts(WugePlanVector, start=c(2008,1), end=c(2013,12), frequency=12)
+TotalEtelPlan <- ts(TotalEtelPlanVector, start=c(2008,1), end=c(2013,12), frequency=12)
+BlueEtelPlan <- ts(BlueEtelPlanVector, start=c(2008,1), end=c(2013,12), frequency=12)
+RedEtelPlan <- ts(RedEtelPlanVector, start=c(2008,1), end=c(2013,12), frequency=12)
+YearPlan <- ts(YearPlanVector, start=c(2008,1), end=c(2013,12), frequency=12)
+TotalPlan_2014 <- ts(PlanVector_2014, start=c(2014,1), end=c(2014,12), frequency=12)
+```
+
+##### Call up the As Is time series to check everything has worked.
+```{r}
+TotalAsIs
+EfakAsIs
+WugeAsIs
+TotalEtelAsIs
+BlueEtelAsIs 
+RedEtelAsIs 
+YearAsIs
+TotalAsIs_2014
+```
+##### Call up the Plan time series to check everything has worked.
+```{r}
+TotalPlan
+EfakPlan
+WugePlan 
+TotalEtelPlan
+BlueEtelPlan
+RedEtelPlan
+YearPlan
+TotalPlan_2014
+```
