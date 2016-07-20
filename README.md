@@ -36,17 +36,17 @@ For my project, I will be forecasting the "total etel" flower exports for Chulwa
 
 ---1.2 [Transformation the data into vectors and time series](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section1_Prep/Readme.md)
 
-2.0 [Analysis of the basic data](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+2.0 [Analysis of the basic data](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section2_Analysis/readme.md)
 
----2.1 [Development of the business portfolio](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+---2.1 [Development of the business portfolio](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section2_Analysis/readme.md)
 
----2.2 [Correlation between As Is and Plan data](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+---2.2 [Correlation between As Is and Plan data](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section2_Analysis/readme.md)
 
----2.3 [Time series analysis](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+---2.3 [Time series analysis](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section2_Analysis/readme.md)
 
--------2.3.1 ["stl" function](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+-------2.3.1 ["stl" function](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section2_Analysis/readme.md)
 
--------2.3.2 [Modification of the seasonal componant to a monthly base](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+-------2.3.2 [Modification of the seasonal componant to a monthly base](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section2_Analysis/readme.md)
 
 3.0 [Correlation of different external indicators](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
 
