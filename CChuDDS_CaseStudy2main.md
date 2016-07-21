@@ -4695,25 +4695,25 @@ summary(Model_holt_2)
 ## 
 ## Forecasts:
 ##          Point Forecast   Lo 80   Hi 80   Lo 95    Hi 95
-## Jan 2014        4488281 3094623 5892425 2362549  6654899
-## Feb 2014        4502175 2840826 6208090 2140740  7330362
-## Mar 2014        4516113 2705753 6504115 1991805  7861388
-## Apr 2014        4530094 2522018 6835550 1752027  8420586
-## May 2014        4544118 2392137 7002390 1661714  8911736
-## Jun 2014        4558186 2272759 7295974 1562856  9462485
-## Jul 2014        4572297 2159254 7545786 1441026  9927287
-## Aug 2014        4586452 2061498 7762751 1370812 10606276
-## Sep 2014        4600650 1943663 7921437 1297245 11025010
-## Oct 2014        4614893 1874715 8056484 1212942 11300499
-## Nov 2014        4629180 1779891 8299720 1151328 11947484
-## Dec 2014        4643510 1749431 8575814 1121082 12545988
+## Jan 2014        4488281 3108617 5929699 2343418  6612986
+## Feb 2014        4502175 2871533 6303665 2122821  7315251
+## Mar 2014        4516113 2672358 6575233 1994659  8011796
+## Apr 2014        4530094 2534415 6823194 1842808  8457073
+## May 2014        4544118 2375364 7192506 1659961  9325340
+## Jun 2014        4558186 2221499 7375158 1526101  9684879
+## Jul 2014        4572297 2125985 7621112 1421149 10160048
+## Aug 2014        4586452 2049519 7745041 1390402 10704583
+## Sep 2014        4600650 1953111 7923419 1265516 11093629
+## Oct 2014        4614893 1878798 8138031 1190987 11535166
+## Nov 2014        4629180 1801380 8350240 1174822 12279715
+## Dec 2014        4643510 1741485 8512681 1022669 12416893
 ```
 
 ```r
 plot(Model_holt_2)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/]-1.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-101-1.png)<!-- -->
 
 ####Dampened trends
 #####As such simple trends tend to forecast the future to positively, we have added a dampener. This also works for exponential trends. We also plot the level and slope individually for each model.
@@ -4773,7 +4773,7 @@ summary(Model_holt_3)
 plot(Model_holt_3)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-101-1.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-1.png)<!-- -->
 
 ```r
 Model_holt_4 <- holt(TotalAsIs, exponential=TRUE, damped=TRUE,h=12)
@@ -4812,50 +4812,50 @@ summary(Model_holt_4)
 ## 
 ## Forecasts:
 ##          Point Forecast   Lo 80   Hi 80   Lo 95    Hi 95
-## Jan 2014        4470648 3075209 5867163 2290065  6570400
-## Feb 2014        4473164 2796269 6244966 2107879  7328095
-## Mar 2014        4475630 2619958 6562570 1902632  7902094
-## Apr 2014        4478047 2419749 6773536 1736783  8454876
-## May 2014        4480418 2292196 6986411 1612093  9061587
-## Jun 2014        4482742 2155243 7255774 1496974  9555840
-## Jul 2014        4485020 2008268 7298030 1347326  9792365
-## Aug 2014        4487253 1932562 7614696 1255281 10301996
-## Sep 2014        4489443 1872275 7714472 1192779 10990587
-## Oct 2014        4491589 1792938 7898360 1135808 11297448
-## Nov 2014        4493694 1681839 8097370 1040336 11470279
-## Dec 2014        4495757 1628309 8110488 1018373 11797498
+## Jan 2014        4470648 3031451 5857084 2279006  6571158
+## Feb 2014        4473164 2865096 6104508 2189937  7230748
+## Mar 2014        4475630 2676368 6481715 1884124  7802683
+## Apr 2014        4478047 2479058 6696519 1786097  8336744
+## May 2014        4480418 2360482 7035098 1629066  8895496
+## Jun 2014        4482742 2221253 7188110 1521968  9323960
+## Jul 2014        4485020 2094587 7396786 1392689 10056464
+## Aug 2014        4487253 1998294 7588778 1331798 10368818
+## Sep 2014        4489443 1920324 7844517 1224228 11110117
+## Oct 2014        4491589 1802443 8045181 1149903 11384568
+## Nov 2014        4493694 1706121 8084347 1089492 11731505
+## Dec 2014        4495757 1643263 8407297 1047301 12379981
 ```
 
 ```r
 plot(Model_holt_4)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-101-2.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-2.png)<!-- -->
 #####level and slope can be plotted individually for each model. 
 
 ```r
 plot(Model_holt_1$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-1.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-103-1.png)<!-- -->
 
 ```r
 plot(Model_holt_2$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-2.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-103-2.png)<!-- -->
 
 ```r
 plot(Model_holt_3$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-3.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-103-3.png)<!-- -->
 
 ```r
 plot(Model_holt_4$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-4.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-103-4.png)<!-- -->
 
 ```r
 plot(Model_holt_1, plot.conf=FALSE, ylab="Exports Chulwalar  )", xlab="Year", main="", fcol="white", type="o")
@@ -4872,7 +4872,7 @@ lines(Model_holt_4$mean, col="orange", type="o")
 legend("topleft",lty=1, col=c(1,"purple","blue","red","green","orange"), c("data", "SES","Holts auto", "Exponential", "Additive Damped", "Multiplicative Damped"),pch=1)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-5.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-103-5.png)<!-- -->
 
 ####Holt-Winter's seasonal method   
 #####Holt and Winters have expanded Holt's model further to include the seasonality aspect. The parameter gamma, which is for smoothing the seasonality, was added to achieve this. The values are better than the models without seasonality. This is logical, since the data is strongly influenced by seasonality.  In the following model, none of the parameters are given so that they will be optimised automatically. There are two models: one using an additive error model method and one using a multiplicative error model. The additive model gives slightly better results than the multiplicative model.
@@ -4935,7 +4935,7 @@ summary(Model_hw_1)
 plot(Model_hw_1)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-103-1.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-104-1.png)<!-- -->
 
 ```r
 Model_hw_2 <- hw(TotalAsIs ,seasonal="multiplicative",h=12)
@@ -4994,7 +4994,7 @@ summary(Model_hw_2)
 plot(Model_hw_2)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-103-2.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-104-2.png)<!-- -->
 
 ```r
 plot(Model_hw_1, ylab="Exports Chulwalar  ", plot.conf=FALSE, type="o", fcol="white", xlab="Year")
@@ -5005,7 +5005,7 @@ lines(Model_hw_2$mean, type="o", col="green")
 legend("topleft",lty=1, pch=1, col=1:3, c("data","Holt Winters' Additive","Holt Winters' Multiplicative"))
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-103-3.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-104-3.png)<!-- -->
 #####In order to use the results later, they need to be converted into point forcasts.
 
 ```r
@@ -5097,7 +5097,7 @@ lines(Model_ses$mean, col="blue", type="o")
 legend("topleft",lty=1, col=c(1,"green"), c("data", expression(alpha == 0.671)),pch=1)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-105-1.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-106-1.png)<!-- -->
 ####Holt's linear trend method   
 
 ```r
@@ -5154,7 +5154,7 @@ summary(Model_holt_1Etel)
 plot(Model_holt_1Etel)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-106-1.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-107-1.png)<!-- -->
 #####expoential trend
 
 ```r
@@ -5193,25 +5193,25 @@ summary(Model_holt_2Etel)
 ## 
 ## Forecasts:
 ##          Point Forecast    Lo 80   Hi 80     Lo 95   Hi 95
-## Jan 2014        2073994 907400.2 3221661 323975.95 3878686
-## Feb 2014        2039645 705318.6 3620038 265188.97 4550865
-## Mar 2014        2005865 567868.6 3834487 205053.00 5422631
-## Apr 2014        1972644 460788.3 4027611 140901.70 5970916
-## May 2014        1939973 389488.1 4207741 109346.08 6702728
-## Jun 2014        1907843 321164.4 4306646 106648.53 7183548
-## Jul 2014        1876246 265183.5 4379073  79689.15 7873134
-## Aug 2014        1845171 232967.7 4434030  68220.60 8001149
-## Sep 2014        1814612 198157.7 4406105  55340.62 8723941
-## Oct 2014        1784558 161416.4 4273673  43274.12 8565462
-## Nov 2014        1755003 149224.9 4297510  34249.38 9256201
-## Dec 2014        1725936 117975.7 4255323  23423.74 9606477
+## Jan 2014        2073994 943333.0 3221950 304165.76 3801680
+## Feb 2014        2039645 677410.7 3611586 179342.42 4677294
+## Mar 2014        2005865 551661.8 3977282 192887.99 5463346
+## Apr 2014        1972644 470627.7 4081560 161332.44 6167974
+## May 2014        1939973 370014.9 4256952 124224.37 6888927
+## Jun 2014        1907843 335723.7 4296684 111097.32 7356212
+## Jul 2014        1876246 281024.8 4386446  92426.51 7540902
+## Aug 2014        1845171 232098.6 4353014  68396.17 8325996
+## Sep 2014        1814612 194090.7 4386436  43251.24 8629595
+## Oct 2014        1784558 173152.9 4301070  46685.50 8681840
+## Nov 2014        1755003 155346.9 4164475  38998.73 8935365
+## Dec 2014        1725936 126372.1 4111468  28954.52 9766827
 ```
 
 ```r
 plot(Model_holt_2Etel)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-107-1.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-1.png)<!-- -->
 #####Dampened trends
 
 ```r
@@ -5269,7 +5269,7 @@ summary(Model_holt_3Etel)
 plot(Model_holt_3Etel)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-1.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-109-1.png)<!-- -->
 
 ```r
 Model_holt_4Etel <- holt(TotalEtelAsIs, exponential=TRUE, damped=TRUE,h=12)
@@ -5307,51 +5307,51 @@ summary(Model_holt_4Etel)
 ## Training set 0.007568185
 ## 
 ## Forecasts:
-##          Point Forecast    Lo 80   Hi 80     Lo 95    Hi 95
-## Jan 2014        2103710 923727.7 3252465 319513.00  3832684
-## Feb 2014        2090196 706518.8 3667394 206336.69  4788899
-## Mar 2014        2077035 589878.9 3911886 180298.88  5605571
-## Apr 2014        2064219 467150.8 4078390 169778.41  6028011
-## May 2014        2051735 399599.8 4331512 123506.23  6993596
-## Jun 2014        2039574 334371.1 4422675 101203.81  7576978
-## Jul 2014        2027727 275317.4 4585339  73816.98  8047071
-## Aug 2014        2016183 249119.0 4677734  74171.89  8450472
-## Sep 2014        2004934 220370.8 4769595  58818.73  8943620
-## Oct 2014        1993970 185851.5 4788822  59117.11  9280242
-## Nov 2014        1983284 164100.0 4852012  48257.87  9777241
-## Dec 2014        1972868 146582.0 4860956  37104.88 10275817
+##          Point Forecast    Lo 80   Hi 80     Lo 95   Hi 95
+## Jan 2014        2103710 892310.5 3254071 259813.60 3863055
+## Feb 2014        2090196 690938.4 3643162 215910.35 4769953
+## Mar 2014        2077035 575598.0 3961430 194786.47 5458674
+## Apr 2014        2064219 456323.2 4042685 127443.85 6162418
+## May 2014        2051735 401899.0 4233388 105773.84 6751365
+## Jun 2014        2039574 357539.7 4462663 126416.41 7591750
+## Jul 2014        2027727 282337.6 4591593  86091.77 7574401
+## Aug 2014        2016183 244398.8 4522257  61990.68 8252473
+## Sep 2014        2004934 207917.5 4592967  54693.60 8790286
+## Oct 2014        1993970 179522.4 4649120  45293.14 8738619
+## Nov 2014        1983284 153248.9 4648877  32200.83 8963219
+## Dec 2014        1972868 143081.0 4817798  33485.95 9939622
 ```
 
 ```r
 plot(Model_holt_4Etel)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-2.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-109-2.png)<!-- -->
+#####level and slope can be plotted individually for each model. 
 
 ```r
-# level and slope can be plotted individually for each model. 
 plot(Model_holt_1Etel$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-3.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-110-1.png)<!-- -->
 
 ```r
 plot(Model_holt_2Etel$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-4.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-110-2.png)<!-- -->
 
 ```r
 plot(Model_holt_3Etel$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-5.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-110-3.png)<!-- -->
 
 ```r
 plot(Model_holt_4Etel$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-6.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-110-4.png)<!-- -->
 
 ```r
 plot(Model_holt_1Etel, plot.conf=FALSE, ylab="Exports Chulwalar  )", xlab="Year", main="", fcol="white", type="o")
@@ -5368,7 +5368,7 @@ lines(Model_holt_4Etel$mean, col="orange", type="o")
 legend("topleft",lty=1, col=c(1,"purple","blue","red","green","orange"), c("data", "SES","Holts auto", "Exponential", "Additive Damped", "Multiplicative Damped"),pch=1)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-7.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-110-5.png)<!-- -->
 
 ####Holt-Winter's seasonal method   
 
@@ -5429,7 +5429,7 @@ summary(Model_hw_1Etel)
 plot(Model_hw_1Etel)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-109-1.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-111-1.png)<!-- -->
 
 ```r
 Model_hw_2Etel <- hw(TotalEtelAsIs ,seasonal="multiplicative",h=12)
@@ -5488,7 +5488,7 @@ summary(Model_hw_2Etel)
 plot(Model_hw_2Etel)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-109-2.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-111-2.png)<!-- -->
 
 ```r
 plot(Model_hw_1Etel, ylab="Exports Chulwalar  ", plot.conf=FALSE, type="o", fcol="white", xlab="Year")
@@ -5499,7 +5499,7 @@ lines(Model_hw_2Etel$mean, type="o", col="green")
 legend("topleft",lty=1, pch=1, col=1:3, c("data","Holt Winters' Additive","Holt Winters' Multiplicative"))
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-109-3.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-111-3.png)<!-- -->
 #####In order to use the results later, they need to be converted into point forcasts.
 
 ```r
