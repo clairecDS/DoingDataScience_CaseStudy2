@@ -101,52 +101,9 @@ For this project, we will be forecasting the "total etel" flower exports for Chu
 
 6.0 [Forecast for 2014](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section6_Forecast2014/readme.md)
 
-7.0 [Developing forecasting models with alternative model approaches](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+7.0 [Forecasting models with smoothing and related approaches](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
 
----7.1 [Exponential smoothing](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
-
--------7.1.1[Simple expontential smoothing](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
-
--------7.1.2 [Holt's linear trend method](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
-
--------7.1.3 [Holt-Winter's seasonal method](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
-
--------7.1.4 [Innovations state space models for exponential smoothing](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
-
----7.2 [ARIMA](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
-
--------7.2.1 [ARIMA modelling](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
-
--------7.2.2 [Seasonal ARIMA modelling](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
-
--------7.2.3[Auto-ARIMA modelling](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
-
----7.3[Dynamic regression models](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
-
-8.0 [Kappa](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
-
----8.1 [Rename the indicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
-
----8.2 [Create the names lists](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
-
----8.3 [Kappa calculation with 2 indicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
-
----8.4 [Kappa calculation with 3 indicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
-
----8.5 [Interpretation of the kappa values](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
-
----8.6 [New model](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
-
----8.7 [Forecasts with the new model (ModelWithInflationAndNationalHolidays)](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
-
----8.8[Interpretation of the forecasts](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
-
----8.9 [Forecast for 2014](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
-
-9.0 [Comparison of the models](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section9_ModelComparison/readme.md)
-                                                     
-
-10.0 [Conclusion and Summary](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section10_Conclusion/readme.md)
+8.0 [Conclusion and Summary](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section10_Conclusion/readme.md)
 
 11.0 [Acknowledgements](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section11_Acknowledgements/readme.md)
 
