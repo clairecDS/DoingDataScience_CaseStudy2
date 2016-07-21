@@ -2,7 +2,7 @@
 Claire Chu & Joseph Stoffa  
 July 19, 2016  
 
-#Case Study 2: Forecasting Chulwalar Exports
+#Forecasting Chulwalar Exports
 #Group Members: Claire Chu & Joseph Stoffa
 
 <br>
