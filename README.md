@@ -22,7 +22,7 @@ Choose one of the flowers from the data provided and complete the following anal
 - Determine which model is best<br>
 - Give a conclusion of your analysis as far as forecasting exports for Chulwalar<br>
 
-#For this project, we will be forecasting the "total etel" flower exports for Chulwalar.
+######We will be forecasting the "total etel" flower exports for Chulwalar.
 
 #Table of Contents
 ****************************
