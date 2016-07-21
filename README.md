@@ -14,18 +14,14 @@ Chulwalar is part of the island group Urbano in the northern hemisphere. They ar
 The Prime Minister of Chulwalar has asked us to help him in forecasting the exports. In order to do this we have been given as is data and plan data as well as a list of indicators which may affect exports. Our job is to find out the best way to forecast Chulwalar's exports in 2014 based on data collected before this year 
 <br>
 
-####Assignment
+####Assignment<br>
 
-Choose one of the flowers from the data provided and complete the following analysis:
-
-- Section the code into modules for importing data, cleaning/modifying data, exploring data, analyzing data
-
-- Add interpretation
-
-- Determine which model is best
-
-- Give a conclusion of your analysis as far as forecasting exports for Chulwalar
-
+Choose one of the flowers from the data provided and complete the following analysis:<br>
+- Section the code into modules for importing data, cleaning/modifying data, exploring data, analyzing data<br>
+- Add interpretation<br>
+- Determine which model is best<br>
+- Give a conclusion of your analysis as far as forecasting exports for Chulwalar<br>
+<br>
 For this project, we will be forecasting the "total etel" flower exports for Chulwalar.
 
 #Table of Contents
