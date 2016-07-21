@@ -1,8 +1,9 @@
 # Doing Data Science: Case Study 2
-Claire Chu  
+Claire Chu & Joseph Stoffa  
 July 19, 2016  
 
 #Case Study 2: Forecasting Chulwalar Exports
+#Group Members: Claire Chu & Joseph Stoffa
 
 <br>
 
@@ -25,7 +26,7 @@ Choose one of the flowers from the data provided and complete the following anal
 
 - Give a conclusion of your analysis as far as forecasting exports for Chulwalar
 
-For my project, I will be forecasting the "total etel" flower exports for Chulwalar.
+For this project, we will be forecasting the "total etel" flower exports for Chulwalar.
 
 #Table of Contents
 
@@ -48,13 +49,106 @@ For my project, I will be forecasting the "total etel" flower exports for Chulwa
 
 -------2.3.2 [Modification of the seasonal componant to a monthly base](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section2_Analysis/readme.md)
 
-3.0 [Correlation of different external indicators](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+3.0 [Correlation of different external indicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section3_Correlation/readme.md)
 
----3.1 [Definition of the indicators and their correlation with the basic data](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+---3.1 [Definition of the indicators and their correlation with the basic data](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section3_Correlation/readme.md)
 
-19.0 [Conclusion and Summary](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+---3.2 [Correlation of the indicators with a time offset](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section3_Correlation/readme.md)
 
-20.0 [Acknowledgements](../clairecDS/DoingDataScience_CaseStudy2/Analysis/)
+---3.3 [Correlation of the indicators with each another](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section3_Correlation/readme.md)
+
+4.0 [Development of forecasting models using tslm()](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section3_Correlation/readme.md)
+
+---4.1 [ModelWithAlllIndicators and with each indicator individually](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section4_tslm/readme.md)
+
+-------4.2.1 [ModelWithHighCorrelatingIndicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section4_tslm/readme.md)
+
+-------4.2.2 [ModelWithLowCorrelatingIndicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section4_tslm/readme.md)
+
+---4.3 [ModelWithTrendAndSeasonalityOnly](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section4_tslm/readme.md)
+
+---4.4 [ModelWithoutTrendAndSeasonality](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section4_tslm/readme.md)
+
+---4.5 [ModelWithEfakExportsIndicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section4_tslm/readme.md)
+
+---4.6 [ModelWithWugeExportsIndicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section4_tslm/readme.md)
+
+---4.7 [ModelWithTotalEtel](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section4_tslm/readme.md)
+
+5.0 [Forecasts with the models](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+---5.1 [Shorten the time series in order to test the forecasts](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+---5.2 [Forecasting und testing the models](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+-----------5.2.1.1 [Forecast ModelWithHighCorrelatingIndicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+-----------5.2.1.2 [Forecast ModelWithLowCorrelatingIndicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+-------5.2.2 [Forecast ModelWithTrendAndSeasonalityOnly](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+-------5.2.3 [Forecast ModelWithEfakExportsIndicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+-------5.2.4 [Forecast ModelWithWugeExportsIndicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+-------5.2.5 [Forecast ModelTotalEtel](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+-------5.2.6 [Forecast ModelWithTotalUrbanoExports](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+-------5.2.7 [Forecast ModelWithNationalHolidays](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+-------5.2.8 [Forecast ModelWithInfluenceNationalHolidays](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section5_Forecast/readme.md)
+
+6.0 [Forecast for 2014](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section6_Forecast2014/readme.md)
+
+7.0 [Developing forecasting models with alternative model approaches](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+
+---7.1 [Exponential smoothing](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+
+-------7.1.1[Simple expontential smoothing](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+
+-------7.1.2 [Holt's linear trend method](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+
+-------7.1.3 [Holt-Winter's seasonal method](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+
+-------7.1.4 [Innovations state space models for exponential smoothing](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+
+---7.2 [ARIMA](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+
+-------7.2.1 [ARIMA modelling](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+
+-------7.2.2 [Seasonal ARIMA modelling](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+
+-------7.2.3[Auto-ARIMA modelling](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+
+---7.3[Dynamic regression models](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section7_AltModel/readme.md)
+
+8.0 [Kappa](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
+
+---8.1 [Rename the indicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
+
+---8.2 [Create the names lists](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
+
+---8.3 [Kappa calculation with 2 indicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
+
+---8.4 [Kappa calculation with 3 indicators](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
+
+---8.5 [Interpretation of the kappa values](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
+
+---8.6 [New model](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
+
+---8.7 [Forecasts with the new model (ModelWithInflationAndNationalHolidays)](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
+
+---8.8[Interpretation of the forecasts](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
+
+---8.9 [Forecast for 2014](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section8_Kappa/readme.md)
+
+9.0 [Comparison of the models](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section9_ModelComparison/readme.md)
+                                                     
+
+10.0 [Conclusion and Summary](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section10_Conclusion/readme.md)
+
+11.0 [Acknowledgements](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Section11_Acknowledgements/readme.md)
 
 ****************************
 <div id='id-section1'/>
@@ -67,14 +161,7 @@ setwd("/Users/macnificent/Desktop")
 library(fpp)
 library(tcltk)
 
-mywait <- function() {
-    tt <- tktoplevel()
-    tkpack( tkbutton(tt, text='Continue', command=function()tkdestroy(tt)),
-        side='bottom')
-    tkbind(tt,'<Key>', function()tkdestroy(tt) )
-
-    tkwait.window(tt)
-}
+source('mywait.r')
 ```
 
 ######We will use the 'fpp' library for forecasting functions and the 'tcltk' library to generate the "mywait" function
