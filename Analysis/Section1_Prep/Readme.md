@@ -1,14 +1,12 @@
 # Preperation, import and convert data
-Claire chu  
+Claire Chu  
 July 20, 2016  
 
-#Case Study 2: Forecasting Chulwalar Exports
+###1.0 Preperation, import and convert data for Chulwalar Exports
 
-1.0 Preperation, import and convert data
+---1.1 [Import the exports data and the indicators](#id-section1.1)
 
-1.1 [Import the exports data and the indicators](#id-section1.1)
-
-1.2 [Transforming the data into vectors and time series](#id-section1.2)
+---1.2 [Transforming the data into vectors and time series](#id-section1.2)
 
 <br>
 
@@ -20,14 +18,7 @@ setwd("/Users/macnificent/Desktop")
 library(fpp)
 library(tcltk)
 
-mywait <- function() {
-    tt <- tktoplevel()
-    tkpack( tkbutton(tt, text='Continue', command=function()tkdestroy(tt)),
-        side='bottom')
-    tkbind(tt,'<Key>', function()tkdestroy(tt) )
-
-    tkwait.window(tt)
-}
+source('~/Desktop/mywait.r')
 ```
 
 ****************************
@@ -152,7 +143,7 @@ IMPORTED INDICATORS
 ****************************
 <div id='id-section1.2'/>
 ####1.2 Transforming the data into vectors and time series 
-
+#####We need to separate the data so that we can do partial dataset analysis on each time series
 #####Seperating the Imported As Is Data
 
 ```r
