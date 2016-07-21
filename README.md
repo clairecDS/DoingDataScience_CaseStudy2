@@ -31,13 +31,13 @@ For this project, we will be forecasting the "total etel" flower exports for Chu
 #Table of Contents
 ****************************
 1.0 [Preperation, import and convert data for Chulwalar Exports]<br>
-2.0 [Analysis of the basic data]
-3.0 [Correlation of different external indicators]
-4.0 [Development of forecasting models]
-5.0 [Forecasts with the models]
-6.0 [Forecast for 2014]
-7.0 [Forecasting models with smoothing and related approaches]
-8.0 [Conclusion]
+2.0 [Analysis of the basic data]<br>
+3.0 [Correlation of different external indicators]<br>
+4.0 [Development of forecasting models]<br>
+5.0 [Forecasts with the models]<br>
+6.0 [Forecast for 2014]<br>
+7.0 [Forecasting models with smoothing and related approaches]<br>
+8.0 [Conclusion]<br>
 ****************************
 <div id='id-section1'/>
 ###PRELIMINARY STEPS
