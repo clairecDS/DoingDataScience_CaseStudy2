@@ -96,6 +96,10 @@ For this project, we will be forecasting the "total etel" flower exports for Chu
 
 7.0 [Forecasting models with smoothing and related approaches](#id-section7.0)
 
+---7.1 [Forecasting Models with Smoothing and related approaches (TotalAsIs)](#id-section7.1)
+
+---7.2 [Forecasting Models with Smoothing and related approaches (TotalEtelAsIs)](#id-section7.2)
+
 8.0 [Conclusion](#id-section8.0)
 
 
@@ -1066,7 +1070,6 @@ mywait()
 ```
 ## <Tcl>
 ```
-#####This indicator also has a high correlation with Efak exports. 
 
 <div id='id-section3.1.6'/>
 #####Yearly exports from Urbano
@@ -1102,7 +1105,6 @@ mywait()
 ```
 ## <Tcl>
 ```
-#####This indicator also has a high correlation with Efak exports. The Wuge exports also show a correlation. Unfortunatly it was not possible to find other useful indicators based on exports from Urbano, due to possible informers being very restrictive with information. 
 
 <div id='id-section3.1.7'/>
 #####Yearly number of Globalisation Party members in Chulwalar
@@ -4535,6 +4537,9 @@ PointForecast_2014_alternative
 ###7.0 Forecasting models with smoothing and related approaches
 #####Exponential Smoothing uses past values to calculate a forecast. The strength with which each value influences the forecast is weakened with help of a smoothing parameter. Thus we are dealing with a weighted average, whose values fade out the longer ago they were in the past.
 ####The Akaike's Information Criterion(AIC/AICc) or the Bayesian Information Criterion (BIC) should be at minimum.
+****************************
+<div id='id-section7.1'/>
+###7.1 Forecasting Models with Smoothing and related approaches (TotalAsIs)
 #####Simple expontential smoothing    
 
 ```r
@@ -4652,9 +4657,9 @@ plot(Model_holt_1)
 ```
 
 ![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-100-1.png)<!-- -->
+#####expoential trend
 
 ```r
-# expoential trend
 Model_holt_2<- holt(TotalAsIs, exponential=TRUE,h=12)
 summary(Model_holt_2)
 ```
@@ -4690,28 +4695,28 @@ summary(Model_holt_2)
 ## 
 ## Forecasts:
 ##          Point Forecast   Lo 80   Hi 80   Lo 95    Hi 95
-## Jan 2014        4488281 3116792 5845375 2374109  6638867
-## Feb 2014        4502175 2885850 6292675 2106504  7311220
-## Mar 2014        4516113 2707335 6505603 1947084  7943989
-## Apr 2014        4530094 2528447 6833814 1786706  8570742
-## May 2014        4544118 2405763 7104714 1667991  9100343
-## Jun 2014        4558186 2312385 7280761 1555177  9589302
-## Jul 2014        4572297 2141407 7552426 1424960 10168374
-## Aug 2014        4586452 2066789 7737586 1321690 10568127
-## Sep 2014        4600650 2000097 8045692 1245197 10918210
-## Oct 2014        4614893 1890512 8174501 1230586 11448365
-## Nov 2014        4629180 1809015 8326644 1114906 11667514
-## Dec 2014        4643510 1722522 8541360 1018468 12599922
+## Jan 2014        4488281 3094623 5892425 2362549  6654899
+## Feb 2014        4502175 2840826 6208090 2140740  7330362
+## Mar 2014        4516113 2705753 6504115 1991805  7861388
+## Apr 2014        4530094 2522018 6835550 1752027  8420586
+## May 2014        4544118 2392137 7002390 1661714  8911736
+## Jun 2014        4558186 2272759 7295974 1562856  9462485
+## Jul 2014        4572297 2159254 7545786 1441026  9927287
+## Aug 2014        4586452 2061498 7762751 1370812 10606276
+## Sep 2014        4600650 1943663 7921437 1297245 11025010
+## Oct 2014        4614893 1874715 8056484 1212942 11300499
+## Nov 2014        4629180 1779891 8299720 1151328 11947484
+## Dec 2014        4643510 1749431 8575814 1121082 12545988
 ```
 
 ```r
 plot(Model_holt_2)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-100-2.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/]-1.png)<!-- -->
 
-## Dampened trends
-As such simple trends tend to forecast the future to positively, we have added a dampener. This also works for exponential trends. We also plot the level and slope individually for each model.
+####Dampened trends
+#####As such simple trends tend to forecast the future to positively, we have added a dampener. This also works for exponential trends. We also plot the level and slope individually for each model.
 
 ```r
 Model_holt_3 <- holt(TotalAsIs, damped=TRUE,h=12)
@@ -4807,18 +4812,18 @@ summary(Model_holt_4)
 ## 
 ## Forecasts:
 ##          Point Forecast   Lo 80   Hi 80   Lo 95    Hi 95
-## Jan 2014        4470648 3065827 5835455 2304035  6646661
-## Feb 2014        4473164 2839123 6193778 2076714  7219093
-## Mar 2014        4475630 2639619 6458624 1860834  7986832
-## Apr 2014        4478047 2503634 6678550 1715630  8487709
-## May 2014        4480418 2380877 6930158 1583727  8994672
-## Jun 2014        4482742 2237200 7145730 1506612  9382039
-## Jul 2014        4485020 2162253 7381078 1443327  9948300
-## Aug 2014        4487253 2033207 7517630 1354412 10247514
-## Sep 2014        4489443 1918656 7814254 1258517 10728249
-## Oct 2014        4491589 1858966 7842745 1177541 10872622
-## Nov 2014        4493694 1739607 8028461 1091964 11574389
-## Dec 2014        4495757 1695135 8178160 1032488 11930349
+## Jan 2014        4470648 3075209 5867163 2290065  6570400
+## Feb 2014        4473164 2796269 6244966 2107879  7328095
+## Mar 2014        4475630 2619958 6562570 1902632  7902094
+## Apr 2014        4478047 2419749 6773536 1736783  8454876
+## May 2014        4480418 2292196 6986411 1612093  9061587
+## Jun 2014        4482742 2155243 7255774 1496974  9555840
+## Jul 2014        4485020 2008268 7298030 1347326  9792365
+## Aug 2014        4487253 1932562 7614696 1255281 10301996
+## Sep 2014        4489443 1872275 7714472 1192779 10990587
+## Oct 2014        4491589 1792938 7898360 1135808 11297448
+## Nov 2014        4493694 1681839 8097370 1040336 11470279
+## Dec 2014        4495757 1628309 8110488 1018373 11797498
 ```
 
 ```r
@@ -4826,31 +4831,31 @@ plot(Model_holt_4)
 ```
 
 ![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-101-2.png)<!-- -->
+#####level and slope can be plotted individually for each model. 
 
 ```r
-# level and slope can be plotted individually for each model. 
 plot(Model_holt_1$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-101-3.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-1.png)<!-- -->
 
 ```r
 plot(Model_holt_2$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-101-4.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-2.png)<!-- -->
 
 ```r
 plot(Model_holt_3$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-101-5.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-3.png)<!-- -->
 
 ```r
 plot(Model_holt_4$model$state)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-101-6.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-4.png)<!-- -->
 
 ```r
 plot(Model_holt_1, plot.conf=FALSE, ylab="Exports Chulwalar  )", xlab="Year", main="", fcol="white", type="o")
@@ -4867,10 +4872,10 @@ lines(Model_holt_4$mean, col="orange", type="o")
 legend("topleft",lty=1, col=c(1,"purple","blue","red","green","orange"), c("data", "SES","Holts auto", "Exponential", "Additive Damped", "Multiplicative Damped"),pch=1)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-101-7.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-5.png)<!-- -->
 
-## Holt-Winter's seasonal method   
-Holt and Winters have expanded Holt's model further to include the seasonality aspect. The parameter gamma, which is for smoothing the seasonality, was added to achieve this. The values are better than the models without seasonality. This is logical, since the data is strongly influenced by seasonality.  In the following model, none of the parameters are given so that they will be optimised automatically. There are two models: one using an additive error model method and one using a multiplicative error model. The additive model gives slightly better results than the multiplicative model.
+####Holt-Winter's seasonal method   
+#####Holt and Winters have expanded Holt's model further to include the seasonality aspect. The parameter gamma, which is for smoothing the seasonality, was added to achieve this. The values are better than the models without seasonality. This is logical, since the data is strongly influenced by seasonality.  In the following model, none of the parameters are given so that they will be optimised automatically. There are two models: one using an additive error model method and one using a multiplicative error model. The additive model gives slightly better results than the multiplicative model.
 
 
 ```r
@@ -4930,7 +4935,7 @@ summary(Model_hw_1)
 plot(Model_hw_1)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-1.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-103-1.png)<!-- -->
 
 ```r
 Model_hw_2 <- hw(TotalAsIs ,seasonal="multiplicative",h=12)
@@ -4989,7 +4994,7 @@ summary(Model_hw_2)
 plot(Model_hw_2)
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-2.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-103-2.png)<!-- -->
 
 ```r
 plot(Model_hw_1, ylab="Exports Chulwalar  ", plot.conf=FALSE, type="o", fcol="white", xlab="Year")
@@ -5000,7 +5005,7 @@ lines(Model_hw_2$mean, type="o", col="green")
 legend("topleft",lty=1, pch=1, col=1:3, c("data","Holt Winters' Additive","Holt Winters' Multiplicative"))
 ```
 
-![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-102-3.png)<!-- -->
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-103-3.png)<!-- -->
 #####In order to use the results later, they need to be converted into point forcasts.
 
 ```r
@@ -5032,4 +5037,502 @@ Model_hw_2_PointForecast
 ######write.csv(Model_hw_1_PointForecast,file='Model_hw_1_PointForecast.csv')
 ######write.csv(Model_hw_2_PointForecast,file='Model_hw_2_PointForecast.csv')
 
+****************************
+<div id='id-section7.2'/>
+###7.2 Forecasting Models with Smoothing and related approaches (TotalEtelAsIs)
+####Simple expontential smoothing    
+
+```r
+Model_sesEtel <- ses(TotalEtelAsIs, h=12)
+summary(Model_sesEtel)
+```
+
+```
+## 
+## Forecast method: Simple exponential smoothing
+## 
+## Model Information:
+## Simple exponential smoothing 
+## 
+## Call:
+##  ses(x = TotalEtelAsIs, h = 12) 
+## 
+##   Smoothing parameters:
+##     alpha = 0.7395 
+## 
+##   Initial states:
+##     l = 1195425.4826 
+## 
+##   sigma:  457693.8
+## 
+##      AIC     AICc      BIC 
+## 2188.810 2188.984 2193.363 
+## 
+## Error measures:
+##                    ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set 17461.77 457693.8 297227.3 -4.846428 21.14544 1.453283
+##                    ACF1
+## Training set 0.02266816
+## 
+## Forecasts:
+##          Point Forecast     Lo 80   Hi 80      Lo 95   Hi 95
+## Jan 2014        2125179 1538620.3 2711737 1228115.06 3022242
+## Feb 2014        2125179 1395654.1 2854703 1009467.27 3240890
+## Mar 2014        2125179 1276437.7 2973919  827141.42 3423216
+## Apr 2014        2125179 1172017.3 3078340  667444.30 3582913
+## May 2014        2125179 1077957.7 3172399  523592.49 3726765
+## Jun 2014        2125179  991676.6 3258680  391636.90 3858720
+## Jul 2014        2125179  911513.9 3338843  269038.63 3981318
+## Aug 2014        2125179  836327.5 3414030  154050.92 4096306
+## Sep 2014        2125179  765291.7 3485065   45411.04 4204946
+## Oct 2014        2125179  697786.7 3552570  -57828.92 4308186
+## Nov 2014        2125179  633333.1 3617024 -156402.12 4406759
+## Dec 2014        2125179  571551.2 3678806 -250889.44 4501246
+```
+
+```r
+plot(Model_sesEtel, plot.conf=FALSE, ylab="Exports Chulwalar  )", xlab="Year", main="", fcol="white", type="o")
+lines(fitted(Model_ses), col="green", type="o")
+lines(Model_ses$mean, col="blue", type="o")
+legend("topleft",lty=1, col=c(1,"green"), c("data", expression(alpha == 0.671)),pch=1)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-105-1.png)<!-- -->
+####Holt's linear trend method   
+
+```r
+Model_holt_1Etel <- holt(TotalEtelAsIs,h=12)
+summary(Model_holt_1Etel)
+```
+
+```
+## 
+## Forecast method: Holt's method
+## 
+## Model Information:
+## Holt's method 
+## 
+## Call:
+##  holt(x = TotalEtelAsIs, h = 12) 
+## 
+##   Smoothing parameters:
+##     alpha = 0.7392 
+##     beta  = 1e-04 
+## 
+##   Initial states:
+##     l = 1059957.9064 
+##     b = 32067.7173 
+## 
+##   sigma:  458401.4
+## 
+##      AIC     AICc      BIC 
+## 2193.032 2193.629 2202.139 
+## 
+## Error measures:
+##                     ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set -23016.69 458401.4 311051.9 -7.993243 22.56079 1.520877
+##                    ACF1
+## Training set 0.02160216
+## 
+## Forecasts:
+##          Point Forecast     Lo 80   Hi 80     Lo 95   Hi 95
+## Jan 2014        2168423 1580958.2 2755888 1269973.0 3066873
+## Feb 2014        2200325 1469713.8 2930937 1082951.5 3317699
+## Mar 2014        2232227 1382214.3 3082240  932244.7 3532210
+## Apr 2014        2264129 1309507.9 3218750  804161.9 3724096
+## May 2014        2296031 1247159.0 3344903  691919.6 3900143
+## Jun 2014        2327933 1192585.2 3463281  591568.4 4064298
+## Jul 2014        2359835 1144126.3 3575544  500568.9 4219101
+## Aug 2014        2391737 1100639.9 3682834  417174.2 4366300
+## Sep 2014        2423639 1061300.2 3785978  340121.5 4507157
+## Oct 2014        2455541 1025487.3 3885595  268462.6 4642620
+## Nov 2014        2487443  992722.0 3982164  201464.4 4773422
+## Dec 2014        2519345  962624.2 4076066  138546.0 4900144
+```
+
+```r
+plot(Model_holt_1Etel)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-106-1.png)<!-- -->
+#####expoential trend
+
+```r
+Model_holt_2Etel<- holt(TotalEtelAsIs, exponential=TRUE,h=12)
+summary(Model_holt_2Etel)
+```
+
+```
+## 
+## Forecast method: Holt's method with exponential trend
+## 
+## Model Information:
+## Holt's method with exponential trend 
+## 
+## Call:
+##  holt(x = TotalEtelAsIs, h = 12, exponential = TRUE) 
+## 
+##   Smoothing parameters:
+##     alpha = 0.7557 
+##     beta  = 1e-04 
+## 
+##   Initial states:
+##     l = 1061058.064 
+##     b = 0.9828 
+## 
+##   sigma:  0.4334
+## 
+##      AIC     AICc      BIC 
+## 2226.746 2227.343 2235.853 
+## 
+## Error measures:
+##                    ME   RMSE      MAE       MPE    MAPE     MASE
+## Training set 51092.46 457072 290407.9 -2.258191 20.3863 1.419939
+##                     ACF1
+## Training set 0.004350746
+## 
+## Forecasts:
+##          Point Forecast    Lo 80   Hi 80     Lo 95   Hi 95
+## Jan 2014        2073994 907400.2 3221661 323975.95 3878686
+## Feb 2014        2039645 705318.6 3620038 265188.97 4550865
+## Mar 2014        2005865 567868.6 3834487 205053.00 5422631
+## Apr 2014        1972644 460788.3 4027611 140901.70 5970916
+## May 2014        1939973 389488.1 4207741 109346.08 6702728
+## Jun 2014        1907843 321164.4 4306646 106648.53 7183548
+## Jul 2014        1876246 265183.5 4379073  79689.15 7873134
+## Aug 2014        1845171 232967.7 4434030  68220.60 8001149
+## Sep 2014        1814612 198157.7 4406105  55340.62 8723941
+## Oct 2014        1784558 161416.4 4273673  43274.12 8565462
+## Nov 2014        1755003 149224.9 4297510  34249.38 9256201
+## Dec 2014        1725936 117975.7 4255323  23423.74 9606477
+```
+
+```r
+plot(Model_holt_2Etel)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-107-1.png)<!-- -->
+#####Dampened trends
+
+```r
+Model_holt_3Etel <- holt(TotalEtelAsIs, damped=TRUE,h=12)
+summary(Model_holt_3Etel)
+```
+
+```
+## 
+## Forecast method: Damped Holt's method
+## 
+## Model Information:
+## Damped Holt's method 
+## 
+## Call:
+##  holt(x = TotalEtelAsIs, h = 12, damped = TRUE) 
+## 
+##   Smoothing parameters:
+##     alpha = 0.7381 
+##     beta  = 1e-04 
+##     phi   = 0.9083 
+## 
+##   Initial states:
+##     l = 1059958.1516 
+##     b = 32067.6737 
+## 
+##   sigma:  458121.2
+## 
+##      AIC     AICc      BIC 
+## 2194.944 2195.853 2206.327 
+## 
+## Error measures:
+##                    ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set 14074.53 458121.2 299379.3 -5.181928 21.35676 1.463805
+##                    ACF1
+## Training set 0.02356552
+## 
+## Forecasts:
+##          Point Forecast     Lo 80   Hi 80      Lo 95   Hi 95
+## Jan 2014        2125648 1538541.7 2712754 1227746.57 3023549
+## Feb 2014        2125720 1395956.7 2855484 1009643.17 3241798
+## Mar 2014        2125787 1276990.4 2974583  827664.91 3423908
+## Apr 2014        2125847 1172752.0 3078941  668214.23 3583479
+## May 2014        2125901 1078831.3 3172971  524546.06 3727256
+## Jun 2014        2125951  992659.2 3259242  392730.88 3859170
+## Jul 2014        2125996  912583.1 3339408  270241.26 3981750
+## Aug 2014        2126037  837466.0 3414607  155337.90 4096735
+## Sep 2014        2126074  766485.6 3485662   46763.21 4205384
+## Oct 2014        2126107  699024.9 3553190  -56426.99 4308642
+## Nov 2014        2126138  634606.2 3617670 -154963.04 4407239
+## Dec 2014        2126166  572851.4 3679480 -249423.62 4501755
+```
+
+```r
+plot(Model_holt_3Etel)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-1.png)<!-- -->
+
+```r
+Model_holt_4Etel <- holt(TotalEtelAsIs, exponential=TRUE, damped=TRUE,h=12)
+summary(Model_holt_4Etel)
+```
+
+```
+## 
+## Forecast method: Damped Holt's method with exponential trend
+## 
+## Model Information:
+## Damped Holt's method with exponential trend 
+## 
+## Call:
+##  holt(x = TotalEtelAsIs, h = 12, damped = TRUE, exponential = TRUE) 
+## 
+##   Smoothing parameters:
+##     alpha = 0.7512 
+##     beta  = 1e-04 
+##     phi   = 0.98 
+## 
+##   Initial states:
+##     l = 1061058.7429 
+##     b = 0.9709 
+## 
+##   sigma:  0.4316
+## 
+##      AIC     AICc      BIC 
+## 2228.461 2229.371 2239.845 
+## 
+## Error measures:
+##                    ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set 46720.45 457308.5 292360.8 -2.502549 20.54122 1.429488
+##                     ACF1
+## Training set 0.007568185
+## 
+## Forecasts:
+##          Point Forecast    Lo 80   Hi 80     Lo 95    Hi 95
+## Jan 2014        2103710 923727.7 3252465 319513.00  3832684
+## Feb 2014        2090196 706518.8 3667394 206336.69  4788899
+## Mar 2014        2077035 589878.9 3911886 180298.88  5605571
+## Apr 2014        2064219 467150.8 4078390 169778.41  6028011
+## May 2014        2051735 399599.8 4331512 123506.23  6993596
+## Jun 2014        2039574 334371.1 4422675 101203.81  7576978
+## Jul 2014        2027727 275317.4 4585339  73816.98  8047071
+## Aug 2014        2016183 249119.0 4677734  74171.89  8450472
+## Sep 2014        2004934 220370.8 4769595  58818.73  8943620
+## Oct 2014        1993970 185851.5 4788822  59117.11  9280242
+## Nov 2014        1983284 164100.0 4852012  48257.87  9777241
+## Dec 2014        1972868 146582.0 4860956  37104.88 10275817
+```
+
+```r
+plot(Model_holt_4Etel)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-2.png)<!-- -->
+
+```r
+# level and slope can be plotted individually for each model. 
+plot(Model_holt_1Etel$model$state)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-3.png)<!-- -->
+
+```r
+plot(Model_holt_2Etel$model$state)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-4.png)<!-- -->
+
+```r
+plot(Model_holt_3Etel$model$state)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-5.png)<!-- -->
+
+```r
+plot(Model_holt_4Etel$model$state)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-6.png)<!-- -->
+
+```r
+plot(Model_holt_1Etel, plot.conf=FALSE, ylab="Exports Chulwalar  )", xlab="Year", main="", fcol="white", type="o")
+lines(fitted(Model_sesEtel), col="purple", type="o")
+lines(fitted(Model_holt_1Etel), col="blue", type="o")
+lines(fitted(Model_holt_2Etel), col="red", type="o")
+lines(fitted(Model_holt_3Etel), col="green", type="o")
+lines(fitted(Model_holt_4Etel), col="orange", type="o")
+lines(Model_sesEtel$mean, col="purple", type="o")
+lines(Model_holt_1Etel$mean, col="blue", type="o")
+lines(Model_holt_2Etel$mean, col="red", type="o")
+lines(Model_holt_3Etel$mean, col="green", type="o")
+lines(Model_holt_4Etel$mean, col="orange", type="o")
+legend("topleft",lty=1, col=c(1,"purple","blue","red","green","orange"), c("data", "SES","Holts auto", "Exponential", "Additive Damped", "Multiplicative Damped"),pch=1)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-108-7.png)<!-- -->
+
+####Holt-Winter's seasonal method   
+
+```r
+Model_hw_1Etel <- hw(TotalEtelAsIs ,seasonal="additive",h=12)
+summary(Model_hw_1Etel)
+```
+
+```
+## 
+## Forecast method: Holt-Winters' additive method
+## 
+## Model Information:
+## Holt-Winters' additive method 
+## 
+## Call:
+##  hw(x = TotalEtelAsIs, h = 12, seasonal = "additive") 
+## 
+##   Smoothing parameters:
+##     alpha = 0.1006 
+##     beta  = 4e-04 
+##     gamma = 1e-04 
+## 
+##   Initial states:
+##     l = 1197857.198 
+##     b = 10920.4281 
+##     s=213227.6 432750.3 389222.1 773339.9 -385004.6 -600027.3
+##            -533376.9 -405213.3 -324353.9 76198.07 175183 188055
+## 
+##   sigma:  172689.4
+## 
+##      AIC     AICc      BIC 
+## 2076.452 2086.343 2112.879 
+## 
+## Error measures:
+##                  ME     RMSE    MAE       MPE     MAPE      MASE
+## Training set -19817 172689.4 137259 -3.310116 10.74612 0.6711232
+##                    ACF1
+## Training set -0.1543248
+## 
+## Forecasts:
+##          Point Forecast   Lo 80   Hi 80     Lo 95   Hi 95
+## Jan 2014        2008304 1786994 2229615 1669839.3 2346769
+## Feb 2014        2005752 1783307 2228197 1665551.5 2345952
+## Mar 2014        1917189 1693606 2140771 1575248.8 2259128
+## Apr 2014        1527024 1302302 1751747 1183340.8 1870708
+## May 2014        1456525 1230660 1682391 1111093.8 1801957
+## Jun 2014        1338726 1111715 1565737  991542.2 1685909
+## Jul 2014        1282438 1054279 1510598  933498.5 1631378
+## Aug 2014        1507832 1278522 1737143 1157132.1 1858532
+## Sep 2014        2676592 2446128 2907057 2324127.9 3029057
+## Oct 2014        2302843 2071223 2534464 1948610.2 2657076
+## Nov 2014        2356737 2123957 2589516 2000730.8 2712742
+## Dec 2014        2147585 1913641 2381529 1789799.1 2505371
+```
+
+```r
+plot(Model_hw_1Etel)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-109-1.png)<!-- -->
+
+```r
+Model_hw_2Etel <- hw(TotalEtelAsIs ,seasonal="multiplicative",h=12)
+summary(Model_hw_2Etel)
+```
+
+```
+## 
+## Forecast method: Holt-Winters' multiplicative method
+## 
+## Model Information:
+## Holt-Winters' multiplicative method 
+## 
+## Call:
+##  hw(x = TotalEtelAsIs, h = 12, seasonal = "multiplicative") 
+## 
+##   Smoothing parameters:
+##     alpha = 0.1007 
+##     beta  = 0.0202 
+##     gamma = 1e-04 
+## 
+##   Initial states:
+##     l = 1185233.6784 
+##     b = 11436.6691 
+##     s=1.1484 1.3007 1.2775 1.5501 0.7138 0.5675
+##            0.6356 0.7225 0.7983 1.0554 1.0793 1.1511
+## 
+##   sigma:  0.1215
+## 
+##      AIC     AICc      BIC 
+## 2071.694 2081.585 2108.121 
+## 
+## Error measures:
+##                    ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set 2570.544 154506.4 126050.4 -1.274176 9.741218 0.6163191
+##                    ACF1
+## Training set -0.2582845
+## 
+## Forecasts:
+##          Point Forecast     Lo 80   Hi 80     Lo 95   Hi 95
+## Jan 2014        2134821 1802370.6 2467272 1626381.7 2643261
+## Feb 2014        2018272 1701688.7 2334855 1534099.6 2502444
+## Mar 2014        1990076 1674924.2 2305227 1508093.0 2472059
+## Apr 2014        1517542 1274319.5 1760765 1145565.3 1889519
+## May 2014        1384653 1159472.1 1609834 1040268.6 1729037
+## Jun 2014        1228015 1024850.6 1431179  917301.9 1538728
+## Jul 2014        1105178  918695.4 1291660  819977.4 1390378
+## Aug 2014        1401176 1159448.3 1642903 1031485.6 1770866
+## Sep 2014        3067063 2524835.0 3609292 2237796.7 3896330
+## Oct 2014        2547465 2084968.1 3009962 1840136.8 3254794
+## Nov 2014        2613831 2125584.2 3102077 1867122.3 3360539
+## Dec 2014        2325692 1877988.5 2773396 1640988.6 3010396
+```
+
+```r
+plot(Model_hw_2Etel)
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-109-2.png)<!-- -->
+
+```r
+plot(Model_hw_1Etel, ylab="Exports Chulwalar  ", plot.conf=FALSE, type="o", fcol="white", xlab="Year")
+lines(fitted(Model_hw_1Etel), col="red", lty=2)
+lines(fitted(Model_hw_2Etel), col="green", lty=2)
+lines(Model_hw_1Etel$mean, type="o", col="red")
+lines(Model_hw_2Etel$mean, type="o", col="green")
+legend("topleft",lty=1, pch=1, col=1:3, c("data","Holt Winters' Additive","Holt Winters' Multiplicative"))
+```
+
+![](CChuDDS_CaseStudy2main_files/figure-html/unnamed-chunk-109-3.png)<!-- -->
+#####In order to use the results later, they need to be converted into point forcasts.
+
+```r
+Model_hw_1_dfEtel <-as.data.frame(Model_hw_1Etel) 
+Model_hw_1_PointForecastEtel<- ts(Model_hw_1_dfEtel$"Point Forecast", start=c(2014,1), end=c(2014,12), frequency=12)
+Model_hw_1_PointForecastEtel
+```
+
+```
+##          Jan     Feb     Mar     Apr     May     Jun     Jul     Aug
+## 2014 2008304 2005752 1917189 1527024 1456525 1338726 1282438 1507832
+##          Sep     Oct     Nov     Dec
+## 2014 2676592 2302843 2356737 2147585
+```
+
+```r
+Model_hw_2_dfEtel <-as.data.frame(Model_hw_2Etel) 
+Model_hw_2_PointForecastEtel <- ts(Model_hw_2_dfEtel$"Point Forecast", start=c(2014,1), end=c(2014,12), frequency=12)
+Model_hw_2_PointForecastEtel
+```
+
+```
+##          Jan     Feb     Mar     Apr     May     Jun     Jul     Aug
+## 2014 2134821 2018272 1990076 1517542 1384653 1228015 1105178 1401176
+##          Sep     Oct     Nov     Dec
+## 2014 3067063 2547465 2613831 2325692
+```
+#####Output instruction for the data export of the results for further use in Excel.
+######write.csv(Model_hw_1_PointForecast,file='Model_hw_1_PointForecast.csv')
+######write.csv(Model_hw_2_PointForecast,file='Model_hw_2_PointForecast.csv')
+
+****************************
+<div id='id-section8.0'/>
+###8.0 Conclusion
+#####Minimizing the AIC/AICc/BIC/RMSE values from the above code, it is clear that the best model for the "TotalEtel" forecast is the Holt-Winters model. We assume this is the case since this is the only model that takes into account the seasonality of the data. The Total Etel exports were found to be highly seasonal so this makes sense. This may be attributed to the Winter blooming flower and the demonstrated correlation between the Total Etel Exports and the Influential National Holidays.
 
