@@ -1,0 +1,68 @@
+# Doing Data Science: Case Study 2
+Claire Chu & Joseph Stoffa  
+July 19, 2016  
+
+#Case Study 2: Forecasting Chulwalar Exports
+#Group Members: Claire Chu & Joseph Stoffa
+
+<br>
+
+##Introduction
+
+Chulwalar is part of the island group Urbano in the northern hemisphere. They are famous for their plants which flower in winter. There are three main plants that Chulwalar exports: Efak is a leafy bush with white flowers, Wuge is a grass like plant with tiny pink flowers and Etel is a flowering tree. Etel comes in two varieties: red flowers and blue flowers. Due to the nature of the products, exports generally are higher towards the end of the year. Chulwalar celebrates its independence on the 1st of December each year. On this day it is custom to give presents to family and friends. Chulwalar also celebrates the March Equinox as a time of rebirth in the northern hemisphere. 
+
+The Prime Minister of Chulwalar has asked us to help him in forecasting the exports. In order to do this we have been given as is data and plan data as well as a list of indicators which may affect exports. Our job is to find out the best way to forecast Chulwalar's exports in 2014 based on data collected before this year 
+<br>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Background
+This case study builds on the data analysis and modeling of plant exports from Chulwalar performed by .
+
+
+##Table of Contents
+####1.0 [Importing Data](#id-section1)
+####2.0 [Cleaning Modifying Data](#id-section2)
+####3.0 [Exploring Data](#id-section3)
+<br>
+
+****************************
+<div id='id-section1'/>
+## 1.0  Importing Data
+
+The script _loadData.r_ loads the the data for this case study into dataframes _ImportedAsISData_, _ImportedIndicators_, and _ImportedPlanData_ from the files _ImportedAsIsDataChulwalar.csv_, _ImportedIndicatorshulwalar.csv_, and _ImportedPlanDataChulwalar.csv_ respectively.
+
+```{r pressure, echo=FALSE}
+source("Scripts/loadData.r")
+```
+
+****************************
+<div id='id-section2'/>
+## 2.0  Cleaning/Modifying Data
+In order to conduct our analysis the data needs to be subsetted into vectors and time series.  For this case study we are only interested in the Total Etel exports.  Data on other individual plants will be ignored.  The script _cleanData.r_ takes the data frames for As Is, Planned, and Indicator data and splits them into vectors which are then converted into time series.  Below are the resultant time series outputted by the script.
+
+``` {r cleaning data}
+source("Scripts/cleanData.r")
+```
+
+****************************
+<div id='id-section3'/>
+## 3.0 Exploring Data
+### 3.1 Preliminary Analysis (Development of the business portfolio)
+
+``` {r preliminary analysis}
+source("Scripts/preliminaryAnalysis.r")
+```
+
+![Figure 1](Plots/TotalAsIs_plot1.png)
+<br>
+![Figure 2](Plots/TotalEtelAsIs_plot1.png)
+<br>
+![Figure 3](Plots/TotalPlan_plot1.png)
+<br>
+![Figure 4](Plots/TotalEtelPlan_plot1.png)
+
+
+
+
