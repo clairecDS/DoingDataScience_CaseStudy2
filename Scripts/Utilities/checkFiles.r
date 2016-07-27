@@ -1,4 +1,5 @@
-#
+#This script contains a number of functions to ensure that check to see if a plot exists and that it is current.  If the
+#plot in question exists and is current the r script that creates the plot will not be called.
 
 buildFileList <- function(dir = NULL, files = NULL) {
   #determine which arguments have been passed
@@ -46,8 +47,5 @@ isModified <- function(fileName) {
   } else return(FALSE)
 }
 
-checkFile <- read.csv("checkFile.csv", stringsAsFactors = FALSE)
-checkFile$Date_Modified <- as.POSIXct(checkFile$Date_Modified)
 
-TotalAsIs_lm <- lm(TotalAsIs ~ TotalPlan , data = TotalAsIs)
-summary(TotalAsIs_lm)
+

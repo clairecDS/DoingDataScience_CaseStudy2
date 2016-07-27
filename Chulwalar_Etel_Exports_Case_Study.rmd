@@ -1,9 +1,6 @@
-# Doing Data Science: Case Study 2
-Claire Chu & Joseph Stoffa  
-July 19, 2016  
-
-#Case Study 2: Forecasting Chulwalar Exports
-#Group Members: Claire Chu & Joseph Stoffa
+# Doing Data Science: Case Study 2 - Forecasting Chulwalar Total Etel Exports
+###Claire Chu & Joseph Stoffa  
+###July 19, 2016  
 
 <br>
 
@@ -16,6 +13,7 @@ The Prime Minister of Chulwalar has asked us to help him in forecasting the expo
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(fpp)
 ```
 ## Background
 This case study builds on the data analysis and modeling of plant exports from Chulwalar performed by .
@@ -25,6 +23,9 @@ This case study builds on the data analysis and modeling of plant exports from C
 ####1.0 [Importing Data](#id-section1)
 ####2.0 [Cleaning Modifying Data](#id-section2)
 ####3.0 [Exploring Data](#id-section3)
+####---3.1 [Preliminary Analysis](#id-section3.1)
+####---3.2 [Preliminary Time Series Analysis](#id-section3.2)
+####4.0 [Correlation of Different External Indicators](#id-section4)
 <br>
 
 ****************************
@@ -49,20 +50,49 @@ source("Scripts/cleanData.r")
 ****************************
 <div id='id-section3'/>
 ## 3.0 Exploring Data
-### 3.1 Preliminary Analysis (Development of the business portfolio)
+<div id='id-section3.1'/>
+### 3.1 Preliminary Analysis
+
+For the preliminary Analysis, the time series have been plotted and the correlation between the As Is and Plan data has been tested in order to ascertain how exact the planning is.  These results show a very high planning accuracy and are therefore suitable for modeling. (Wheeler et al.)
 
 ``` {r preliminary analysis}
 source("Scripts/preliminaryAnalysis.r")
 ```
 
 ![Figure 1](Plots/TotalAsIs_plot1.png)
-<br>
+
 ![Figure 2](Plots/TotalEtelAsIs_plot1.png)
-<br>
+
 ![Figure 3](Plots/TotalPlan_plot1.png)
-<br>
+
 ![Figure 4](Plots/TotalEtelPlan_plot1.png)
 
+<div id='id-section3.2'/>
+### 3.2 Preliminary Time Series Analysis
+
+The time series can be analyzed using the _stl_ function in order to seperate the trend, seasonality, and remainder (remaining) coincidental) components from one another.  Thus the individual time series can be shown graphically and tabularly.  The trend of the total exports is almost linear.  A relatively uniform seasonality can be seen in Figure 5. (Wheeler et al).
+
+![Figure 5](Plots/TotalAsIs_stl.png)
+
+```{r Total As Is STL}
+print(TotalAsIs_stl)
+```
+
+It is interesting to note that the almost linear trend is not seen in the individual segment for Total Etel (Figure 6).  The individual trends for all flower exports run in partially opposite directions in the middle of the time scale, which causes the total As Is data trend to be linear. (Wheeler et al).
+
+![Figure 6](Plots/TotalEtelAsIs_stl.png)
+
+```{r Total Etel As Is STL}
+print(TotalEtelAsIs_stl)
+```
 
 
+![Figure 7](Plots/STL_TimeSeries_trend.png)
 
+The modification of the seasonality component can also be changed into a montly view.  It only makes sense to do this if the seasonality component as the trend looks almost identical and the remainder is then randomly spread. (Wheeler et al.)
+
+![Figure 8](Plots/STL_TimeSeries_seasonal.png)
+
+****************************
+<div id='id-section4'/>
+## 4.0 Correlation of Different External Indicators

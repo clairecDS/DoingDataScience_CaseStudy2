@@ -1,5 +1,9 @@
 "","File","Date_Modified"
-"1","./Plots/TotalAsIs_plot1.r",2016-07-27 01:14:04
-"2","./Plots/TotalEtelAsIs_plot1.r",2016-07-27 01:39:31
-"3","./Plots/TotalEtelPlan_plot1.r",2016-07-27 01:34:37
-"4","./Plots/TotalPlan_plot1.r",2016-07-27 02:07:55
+"1","./Plots/STL_TimeSeries_seasonal.r",2016-07-27 05:00:37
+"2","./Plots/STL_TimeSeries_trend.r",2016-07-27 04:59:16
+"3","./Plots/TotalAsIs_plot1.r",2016-07-27 01:14:04
+"4","./Plots/TotalAsIs_stl.r",2016-07-27 04:22:33
+"5","./Plots/TotalEtelAsIs_plot1.r",2016-07-27 01:39:31
+"6","./Plots/TotalEtelAsIs_stl.r",2016-07-27 04:25:09
+"7","./Plots/TotalEtelPlan_plot1.r",2016-07-27 01:34:37
+"8","./Plots/TotalPlan_plot1.r",2016-07-27 02:07:55
