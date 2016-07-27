@@ -5738,7 +5738,7 @@ Model_hw_2_PointForecastEtel
 ###9.0 Acknowledgements
 
 #####While this document details the specific models and data for the "TotalEtel" flowers all data and code are based off of information provided in the document entitled "Forecasting Exports Chulwalar_0.8a.R". This document can be found in this repository in the data folder.
-[/Analysis/Data](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Data/Forecasting%20Exports%20Chulwalar_0.8a.R)<br>
+[/Analysis/Data](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Data/Forecasting%20Exports%20Chulwalar_0.8a.R)<br>
 #####We would like to credit the following for their contributions to this document.<br>
 #####Amy Wheeler<br>
 #####Nina Weitkamp<br>
