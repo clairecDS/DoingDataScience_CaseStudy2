@@ -102,6 +102,8 @@ For this project, we will be forecasting the "total etel" flower exports for Chu
 
 8.0 [Conclusion](#id-section8.0)
 
+9.0 [Acknowledgements](#id-section9.0)
+
 
 <br>
 
@@ -4737,18 +4739,18 @@ summary(Model_holt_2)
 ## 
 ## Forecasts:
 ##          Point Forecast   Lo 80   Hi 80   Lo 95    Hi 95
-## Jan 2014        4488281 3142121 5940029 2333959  6691507
-## Feb 2014        4502175 2860492 6206220 2146341  7352381
-## Mar 2014        4516113 2686022 6603015 1971486  8004524
-## Apr 2014        4530094 2521734 6875427 1856849  8538001
-## May 2014        4544118 2431265 7185025 1738919  9238360
-## Jun 2014        4558186 2300085 7402477 1603628  9744935
-## Jul 2014        4572297 2185840 7583230 1480130 10281792
-## Aug 2014        4586452 2078527 7771160 1426899 10609170
-## Sep 2014        4600650 1988814 7885043 1349424 11195251
-## Oct 2014        4614893 1912153 8140922 1266993 11810425
-## Nov 2014        4629180 1812661 8421788 1172552 12480471
-## Dec 2014        4643510 1747077 8496705 1129042 12879017
+## Jan 2014        4488281 3075054 5917174 2300732  6650128
+## Feb 2014        4502175 2843063 6272756 2134231  7293521
+## Mar 2014        4516113 2668763 6441983 1977788  7862260
+## Apr 2014        4530094 2528312 6814940 1823798  8553689
+## May 2014        4544118 2408838 7116178 1751712  9173504
+## Jun 2014        4558186 2227044 7310356 1538266  9424770
+## Jul 2014        4572297 2144501 7522494 1482858  9980872
+## Aug 2014        4586452 2045707 7658686 1378757 10510558
+## Sep 2014        4600650 1940163 7827296 1278724 10855226
+## Oct 2014        4614893 1865263 8036620 1269723 11350069
+## Nov 2014        4629180 1794623 8271215 1173475 11941510
+## Dec 2014        4643510 1716242 8345524 1123073 12454467
 ```
 
 ```r
@@ -4854,18 +4856,18 @@ summary(Model_holt_4)
 ## 
 ## Forecasts:
 ##          Point Forecast   Lo 80   Hi 80   Lo 95    Hi 95
-## Jan 2014        4470648 3095091 5894158 2371748  6614126
-## Feb 2014        4473164 2807372 6210756 2102803  7378623
-## Mar 2014        4475630 2630759 6523175 1910154  7777138
-## Apr 2014        4478047 2461313 6798449 1746397  8446699
-## May 2014        4480418 2353211 7054908 1665445  9017452
-## Jun 2014        4482742 2205481 7264455 1528535  9412490
-## Jul 2014        4485020 2105949 7463108 1450489  9896522
-## Aug 2014        4487253 1999917 7542049 1294700 10244157
-## Sep 2014        4489443 1937928 7722076 1253876 10642501
-## Oct 2014        4491589 1847330 7719740 1205944 11153674
-## Nov 2014        4493694 1751835 8111158 1098739 11203967
-## Dec 2014        4495757 1668687 8232651 1050130 11859164
+## Jan 2014        4470648 3035902 5859669 2324210  6632698
+## Feb 2014        4473164 2798422 6196358 2112300  7306782
+## Mar 2014        4475630 2607508 6505256 1869631  7982478
+## Apr 2014        4478047 2466162 6710381 1751693  8255394
+## May 2014        4480418 2351811 7014521 1640170  8955653
+## Jun 2014        4482742 2226601 7105481 1532910  9505872
+## Jul 2014        4485020 2054870 7294864 1406658 10058841
+## Aug 2014        4487253 2014225 7501892 1351746 10322885
+## Sep 2014        4489443 1883472 7658841 1250331 10512100
+## Oct 2014        4491589 1826328 7778770 1217028 10896644
+## Nov 2014        4493694 1758205 7983625 1117273 11329021
+## Dec 2014        4495757 1646072 8165142 1062536 12047843
 ```
 
 ```r
@@ -5235,18 +5237,18 @@ summary(Model_holt_2Etel)
 ## 
 ## Forecasts:
 ##          Point Forecast    Lo 80   Hi 80     Lo 95   Hi 95
-## Jan 2014        2073994 887921.4 3168158 256098.78 3796312
-## Feb 2014        2039645 685313.9 3503941 224289.83 4647204
-## Mar 2014        2005865 543241.9 3796390 191195.33 5388556
-## Apr 2014        1972644 446446.1 3999216 126057.50 5751553
-## May 2014        1939973 375029.1 4143279 116957.64 6524254
-## Jun 2014        1907843 313737.5 4167533  92149.71 7076601
-## Jul 2014        1876246 272758.5 4190634  82513.25 7396040
-## Aug 2014        1845171 231013.4 4275449  72018.64 7342878
-## Sep 2014        1814612 199631.2 4180575  55323.11 7793947
-## Oct 2014        1784558 168045.0 4203780  40883.10 8590321
-## Nov 2014        1755003 147865.6 4241903  37822.17 8694340
-## Dec 2014        1725936 123803.9 4243352  28822.96 8924172
+## Jan 2014        2073994 956292.3 3202674 339714.33 3825645
+## Feb 2014        2039645 697350.3 3573386 249414.54 4685613
+## Mar 2014        2005865 573762.6 3829416 190777.80 5452954
+## Apr 2014        1972644 481096.9 4081309 156830.63 5897348
+## May 2014        1939973 403984.7 4090743 137220.66 6572535
+## Jun 2014        1907843 326975.4 4184715  93367.13 7194029
+## Jul 2014        1876246 284225.6 4206572  77019.58 7230936
+## Aug 2014        1845171 232991.8 4250078  70675.06 7878851
+## Sep 2014        1814612 192242.9 4306826  52356.89 8134810
+## Oct 2014        1784558 159859.5 4306216  39056.39 9225484
+## Nov 2014        1755003 144820.6 4243016  36023.55 8999353
+## Dec 2014        1725936 115614.4 4170061  27629.41 8797322
 ```
 
 ```r
@@ -5350,18 +5352,18 @@ summary(Model_holt_4Etel)
 ## 
 ## Forecasts:
 ##          Point Forecast    Lo 80   Hi 80     Lo 95    Hi 95
-## Jan 2014        2103710 976708.0 3246430 330882.31  3824121
-## Feb 2014        2090196 705338.6 3577791 238889.46  4541060
-## Mar 2014        2077035 578418.3 3804890 194554.43  5485977
-## Apr 2014        2064219 473534.3 4016574 140872.54  5907042
-## May 2014        2051735 380648.4 4182888 101940.30  6300648
-## Jun 2014        2039574 335244.6 4298764  89678.39  7019081
-## Jul 2014        2027727 289520.6 4429795  94532.00  7430280
-## Aug 2014        2016183 237871.4 4516116  70149.65  8080286
-## Sep 2014        2004934 206079.1 4509567  63117.26  8349748
-## Oct 2014        1993970 183067.1 4794381  48131.57  9077885
-## Nov 2014        1983284 150545.9 4749262  38815.43  9654838
-## Dec 2014        1972868 140885.3 4787751  35785.44 10362802
+## Jan 2014        2103710 957143.4 3305317 337223.11  3904479
+## Feb 2014        2090196 732698.1 3625978 237354.53  4729331
+## Mar 2014        2077035 586031.1 4021909 180375.58  5425252
+## Apr 2014        2064219 475507.7 4131834 132884.31  6208573
+## May 2014        2051735 413475.8 4243012 126052.07  6578540
+## Jun 2014        2039574 335212.0 4377963 111485.46  7160079
+## Jul 2014        2027727 303053.8 4586479  97417.01  7740617
+## Aug 2014        2016183 262089.5 4712820  78615.81  7946934
+## Sep 2014        2004934 224524.7 4601786  68787.61  8644573
+## Oct 2014        1993970 194606.2 4748310  56508.21  9042103
+## Nov 2014        1983284 174766.5 4685755  45579.28 10010006
+## Dec 2014        1972868 150840.5 4874846  35460.75  9963410
 ```
 
 ```r
@@ -5717,6 +5719,33 @@ accuracy(Model_hw_2Etel)
 ## Training set -0.2582845
 ```
 
-#####Minimizing the AIC and RMSE from the models, it is clear that the best model for the "TotalEtel" forecast is the Holt-Winters model. We can see that the Holt-Winters Multiplicative Model is marginally better than the Additive model. We assume this is the case since this is the only model that takes into account the seasonality changing proportional to the level of the data. Whereas the Additive model would have been better if the "TotalEtel" seasonality would have been roughly constant throughout the data. The Total Etel exports were found to be highly seasonal so this makes sense. This may be attributed to the Winter blooming flower and the demonstrated correlation between the Total Etel Exports and the Influential National Holidays.
+#####Minimizing the AIC and RMSE from the models, it is clear that the best model for the "TotalEtel" forecast is the Holt-Winters model. We can see that the Holt-Winters Multiplicative Model is marginally better than the Additive model. We assume this is the case since this is the only model that takes into account the seasonality changing proportionally to the level of the data. Whereas the Additive model would have been better if the "TotalEtel" seasonality would have been roughly constant throughout the data. The Total Etel exports were found to be highly seasonal so this makes sense. This may be attributed to the Winter blooming flower and the demonstrated correlation between the Total Etel Exports and the Influential National Holidays. Our complete predicted forecast for 2014 Total Etel Exports, based on the Holt-Winters Multiplicative Model, is as follows:
 
 
+```r
+Model_hw_2_PointForecastEtel
+```
+
+```
+##          Jan     Feb     Mar     Apr     May     Jun     Jul     Aug
+## 2014 2134821 2018272 1990076 1517542 1384653 1228015 1105178 1401176
+##          Sep     Oct     Nov     Dec
+## 2014 3067063 2547465 2613831 2325692
+```
+
+****************************
+<div id='id-section9.0'/>
+###9.0 Acknowledgements
+
+#####While this document details the specific models and data for the "TotalEtel" flowers all data and code are based off of information provided in the document entitled "Forecasting Exports Chulwalar_0.8a.R". This document can be found in this repository in the data folder.
+[/Analysis/Data](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Analysis/Data/Forecasting%20Exports%20Chulwalar_0.8a.R)<br>
+#####We would like to credit the following for their contributions to this document.<br>
+#####Amy Wheeler<br>
+#####Nina Weitkamp<br>
+#####Patrick Berlekamp<br>
+#####Johannes Brauer<br>
+#####Andreas Faatz<br>
+#####Hans-Ulrich Holst<br>
+#####Designed and coded at Hochschule Osnabrück, Germany<br>
+#####Contact: faatz@wi.hs-osnabrueck.de<br>
+#####Additionally, we would like to thank: Rob Hyndman for the forecasting libraries in R<br>
