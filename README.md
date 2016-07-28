@@ -34,8 +34,7 @@ This case study builds on the data analysis and modeling of plant exports from C
 ###Summary<br>
 ######Based on the completed analysis, it is clear that the best model for the "TotalEtel" forecast is the Holt-Winters model. We can see that the Holt-Winters Multiplicative Model is marginally better than the Additive model. We assume this is the case since this is the only model that takes into account the seasonality changing proportionally to the level of the data. Whereas the Additive model would have been better if the "TotalEtel" seasonality would have been roughly constant throughout the data. The Total Etel exports were found to be highly seasonal so this makes sense. This may be attributed to the Winter blooming flower and the demonstrated correlation between the Total Etel Exports and the Influential National Holidays. Our complete predicted forecast for 2014 Total Etel Exports, based on the Holt-Winters Multiplicative Model, is as follows:<br>
 <br>
-Model_hw_2_PointForecastEtel<br>
-#####          Jan     Feb     Mar     Apr     May     Jun     Jul     Aug
-###### 2014 2134821 2018272 1990076 1517542 1384653 1228015 1105178 1401176
-#####          Sep     Oct     Nov     Dec
-###### 2014 3067063 2547465 2613831 2325692
+###2014 forecast for TotalEtel Flower Exports<br>
+##### Jan     Feb     Mar     Apr     May     Jun     Jul     Aug     Sep     Oct     Nov     Dec
+##### 2134821 2018272 1990076 1517542 1384653 1228015 1105178 1401176 3067063 2547465 2613831 232569
+
