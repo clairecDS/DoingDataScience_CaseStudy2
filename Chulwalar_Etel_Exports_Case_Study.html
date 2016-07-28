@@ -130,11 +130,11 @@ $(document).ready(function () {
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
 <p>Chulwalar is part of the island group Urbano in the northern hemisphere. They are famous for their plants which flower in winter. There are three main plants that Chulwalar exports: Efak is a leafy bush with white flowers, Wuge is a grass like plant with tiny pink flowers and Etel is a flowering tree. Etel comes in two varieties: red flowers and blue flowers. Due to the nature of the products, exports generally are higher towards the end of the year. Chulwalar celebrates its independence on the 1st of December each year. On this day it is custom to give presents to family and friends. Chulwalar also celebrates the March Equinox as a time of rebirth in the northern hemisphere.</p>
-<p>The Prime Minister of Chulwalar has asked us to help him in forecasting the exports. In order to do this we have been given as is data and plan data as well as a list of indicators which may affect exports. Our job is to find out the best way to forecast Chulwalar’s exports in 2014 based on data collected before this year <br></p>
+<p>The Prime Minister of Chulwalar has asked [Wheeler et al] to help him in forecasting the exports. In order to do this [Wheeler et al] were given as is data and plan data as well as a list of indicators which may affect exports. The Wheeler group’s job is to find out the best way to forecast Chulwalar’s exports in 2014 based on data collected before this year <br></p>
 </div>
 <div id="background" class="section level2">
 <h2>Background</h2>
-<p>This case study builds on the data analysis and modeling of plant exports from Chulwalar performed by .</p>
+<p>This case study builds on the data analysis and modeling of plant exports from Chulwalar performed by Wheeler et al (outlined in Introduction) in order to find the best model to forecast total Etel exports.</p>
 </div>
 <div id="table-of-contents" class="section level2">
 <h2>Table of Contents</h2>
@@ -197,6 +197,12 @@ $(document).ready(function () {
 </div>
 <div id="dynamic-regression-models" class="section level4">
 <h4>—8.3 <a href="#id-section8.3">Dynamic Regression Models</a></h4>
+</div>
+<div id="conclusion" class="section level4">
+<h4>9.0 <a href="#id-section9">Conclusion</a></h4>
+</div>
+<div id="acknowledgements" class="section level4">
+<h4>10.0 <a href="#id-section10">Acknowledgements</a></h4>
 <p><br></p>
 <hr />
 <div id="id-section1"></div>
@@ -3051,31 +3057,31 @@ head(CEPIVector) </code></pre>
 ## 
 ## Forecasts:
 ##          Point Forecast   Lo 80   Hi 80   Lo 95    Hi 95
-## Jan 2014        4488281 3079572 5917143 2361496  6606934
-## Feb 2014        4502175 2865933 6267970 2136022  7344097
-## Mar 2014        4516113 2683479 6557297 1941747  8044014
-## Apr 2014        4530094 2511922 6818176 1783514  8491767
-## May 2014        4544118 2378101 7011405 1728723  8881268
-## Jun 2014        4558186 2266118 7217789 1582685  9518637
-## Jul 2014        4572297 2216615 7573837 1459988  9928815
-## Aug 2014        4586452 2069364 7651433 1396947 10412346
-## Sep 2014        4600650 1968728 7889760 1249266 11193520
-## Oct 2014        4614893 1857607 8036205 1220642 11206296
-## Nov 2014        4629180 1772238 8177173 1132001 11904081
-## Dec 2014        4643510 1707848 8387417 1067253 12460931
+## Jan 2014        4488281 3079356 5929905 2267133  6627121
+## Feb 2014        4502175 2800562 6284270 2153253  7337477
+## Mar 2014        4516113 2655581 6568212 1909563  7964088
+## Apr 2014        4530094 2477624 6783132 1767925  8609351
+## May 2014        4544118 2362005 7192448 1651260  9367207
+## Jun 2014        4558186 2222248 7385947 1508398  9812193
+## Jul 2014        4572297 2133531 7548241 1424075 10191622
+## Aug 2014        4586452 2020854 7721725 1360677 10652542
+## Sep 2014        4600650 1954180 7914306 1276245 10920198
+## Oct 2014        4614893 1868076 8186420 1191491 11577090
+## Nov 2014        4629180 1798632 8356713 1165514 11626315
+## Dec 2014        4643510 1715064 8505422 1055078 12320561
 ##          Point Forecast   Lo 80   Hi 80   Lo 95    Hi 95
-## Jan 2014        4488281 3079572 5917143 2361496  6606934
-## Feb 2014        4502175 2865933 6267970 2136022  7344097
-## Mar 2014        4516113 2683479 6557297 1941747  8044014
-## Apr 2014        4530094 2511922 6818176 1783514  8491767
-## May 2014        4544118 2378101 7011405 1728723  8881268
-## Jun 2014        4558186 2266118 7217789 1582685  9518637
-## Jul 2014        4572297 2216615 7573837 1459988  9928815
-## Aug 2014        4586452 2069364 7651433 1396947 10412346
-## Sep 2014        4600650 1968728 7889760 1249266 11193520
-## Oct 2014        4614893 1857607 8036205 1220642 11206296
-## Nov 2014        4629180 1772238 8177173 1132001 11904081
-## Dec 2014        4643510 1707848 8387417 1067253 12460931</code></pre>
+## Jan 2014        4488281 3079356 5929905 2267133  6627121
+## Feb 2014        4502175 2800562 6284270 2153253  7337477
+## Mar 2014        4516113 2655581 6568212 1909563  7964088
+## Apr 2014        4530094 2477624 6783132 1767925  8609351
+## May 2014        4544118 2362005 7192448 1651260  9367207
+## Jun 2014        4558186 2222248 7385947 1508398  9812193
+## Jul 2014        4572297 2133531 7548241 1424075 10191622
+## Aug 2014        4586452 2020854 7721725 1360677 10652542
+## Sep 2014        4600650 1954180 7914306 1276245 10920198
+## Oct 2014        4614893 1868076 8186420 1191491 11577090
+## Nov 2014        4629180 1798632 8356713 1165514 11626315
+## Dec 2014        4643510 1715064 8505422 1055078 12320561</code></pre>
 <div class="figure">
 <img src="data:image/png;base64,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" alt="Figure 38" />
 <p class="caption">Figure 38</p>
@@ -3162,31 +3168,31 @@ head(CEPIVector) </code></pre>
 ## 
 ## Forecasts:
 ##          Point Forecast   Lo 80   Hi 80   Lo 95    Hi 95
-## Jan 2014        4470648 3085438 5900227 2361744  6575528
-## Feb 2014        4473164 2871654 6274330 2100530  7419443
-## Mar 2014        4475630 2662600 6534887 1908705  7891737
-## Apr 2014        4478047 2454529 6869427 1763470  8520055
-## May 2014        4480418 2306850 7000469 1639515  9032062
-## Jun 2014        4482742 2260601 7290736 1510797  9457842
-## Jul 2014        4485020 2069903 7485808 1349609 10168400
-## Aug 2014        4487253 2008983 7646730 1340893 10380069
-## Sep 2014        4489443 1910142 7780430 1214236 10779463
-## Oct 2014        4491589 1837944 8026016 1164813 11232318
-## Nov 2014        4493694 1755451 8059205 1114684 11916622
-## Dec 2014        4495757 1664421 8163008 1012791 12149324
+## Jan 2014        4470648 3037886 5820486 2273082  6500549
+## Feb 2014        4473164 2797134 6194914 2128181  7208565
+## Mar 2014        4475630 2613850 6447112 1895342  7865890
+## Apr 2014        4478047 2464096 6679930 1810244  8269024
+## May 2014        4480418 2376032 6939280 1655053  8632893
+## Jun 2014        4482742 2221241 7121680 1522502  9298808
+## Jul 2014        4485020 2127363 7328778 1421458  9748413
+## Aug 2014        4487253 2021313 7475458 1361775 10312125
+## Sep 2014        4489443 1933280 7638439 1232894 10707984
+## Oct 2014        4491589 1808684 7854277 1175609 10920716
+## Nov 2014        4493694 1775947 7969377 1120686 11352634
+## Dec 2014        4495757 1682140 8167590 1042803 12041359
 ##          Point Forecast   Lo 80   Hi 80   Lo 95    Hi 95
-## Jan 2014        4470648 3085438 5900227 2361744  6575528
-## Feb 2014        4473164 2871654 6274330 2100530  7419443
-## Mar 2014        4475630 2662600 6534887 1908705  7891737
-## Apr 2014        4478047 2454529 6869427 1763470  8520055
-## May 2014        4480418 2306850 7000469 1639515  9032062
-## Jun 2014        4482742 2260601 7290736 1510797  9457842
-## Jul 2014        4485020 2069903 7485808 1349609 10168400
-## Aug 2014        4487253 2008983 7646730 1340893 10380069
-## Sep 2014        4489443 1910142 7780430 1214236 10779463
-## Oct 2014        4491589 1837944 8026016 1164813 11232318
-## Nov 2014        4493694 1755451 8059205 1114684 11916622
-## Dec 2014        4495757 1664421 8163008 1012791 12149324</code></pre>
+## Jan 2014        4470648 3037886 5820486 2273082  6500549
+## Feb 2014        4473164 2797134 6194914 2128181  7208565
+## Mar 2014        4475630 2613850 6447112 1895342  7865890
+## Apr 2014        4478047 2464096 6679930 1810244  8269024
+## May 2014        4480418 2376032 6939280 1655053  8632893
+## Jun 2014        4482742 2221241 7121680 1522502  9298808
+## Jul 2014        4485020 2127363 7328778 1421458  9748413
+## Aug 2014        4487253 2021313 7475458 1361775 10312125
+## Sep 2014        4489443 1933280 7638439 1232894 10707984
+## Oct 2014        4491589 1808684 7854277 1175609 10920716
+## Nov 2014        4493694 1775947 7969377 1120686 11352634
+## Dec 2014        4495757 1682140 8167590 1042803 12041359</code></pre>
 <div class="figure">
 <img src="data:image/png;base64,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" alt="Figure 40" />
 <p class="caption">Figure 40</p>
@@ -4118,6 +4124,98 @@ head(CEPIVector) </code></pre>
 ## 2014 4311394 4182765 4376006 3903181 3630475 3593592 3369718 3756013
 ##          Sep     Oct     Nov     Dec
 ## 2014 5395076 5099481 5376694 4590587</code></pre>
+<hr />
+<div id="id-section9"></div>
+</div>
+</div>
+<div id="conclusion-1" class="section level2">
+<h2>9.0 Conclusion</h2>
+<div id="ses-model" class="section level5">
+<h5>SES model</h5>
+<pre class="r"><code>AIC(Model_sesEtel$model)</code></pre>
+<pre><code>## [1] 2188.81</code></pre>
+<pre class="r"><code>accuracy(Model_sesEtel)</code></pre>
+<pre><code>##                    ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set 17461.77 457693.8 297227.3 -4.846428 21.14544 1.453283
+##                    ACF1
+## Training set 0.02266816</code></pre>
+</div>
+<div id="holt-model" class="section level4">
+<h4>Holt model</h4>
+<pre class="r"><code>AIC(Model_holt_1Etel$model)</code></pre>
+<pre><code>## [1] 2193.032</code></pre>
+<pre class="r"><code>accuracy(Model_holt_1Etel)</code></pre>
+<pre><code>##                     ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set -23016.69 458401.4 311051.9 -7.993243 22.56079 1.520877
+##                    ACF1
+## Training set 0.02160216</code></pre>
+<div id="holt-model-with-exponential-trend" class="section level5">
+<h5>Holt Model with Exponential Trend</h5>
+<pre class="r"><code>AIC(Model_holt_2Etel$model)</code></pre>
+<pre><code>## [1] 2226.746</code></pre>
+<pre class="r"><code>accuracy(Model_holt_2Etel)</code></pre>
+<pre><code>##                    ME   RMSE      MAE       MPE    MAPE     MASE
+## Training set 51092.46 457072 290407.9 -2.258191 20.3863 1.419939
+##                     ACF1
+## Training set 0.004350746</code></pre>
+</div>
+<div id="dampened-holt-model" class="section level5">
+<h5>Dampened Holt Model</h5>
+<pre class="r"><code>AIC(Model_holt_3Etel$model)</code></pre>
+<pre><code>## [1] 2194.944</code></pre>
+<pre class="r"><code>accuracy(Model_holt_3Etel)</code></pre>
+<pre><code>##                    ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set 14074.53 458121.2 299379.3 -5.181928 21.35676 1.463805
+##                    ACF1
+## Training set 0.02356552</code></pre>
+</div>
+<div id="dampened-holt-model-with-exponential-trend" class="section level5">
+<h5>Dampened Holt Model with Exponential Trend</h5>
+<pre class="r"><code>AIC(Model_holt_4Etel$model)</code></pre>
+<pre><code>## [1] 2228.461</code></pre>
+<pre class="r"><code>accuracy(Model_holt_4Etel)</code></pre>
+<pre><code>##                    ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set 46720.45 457308.5 292360.8 -2.502549 20.54122 1.429488
+##                     ACF1
+## Training set 0.007568185</code></pre>
+</div>
+<div id="holt-winters-additive-model" class="section level5">
+<h5>Holt Winters Additive Model</h5>
+<pre class="r"><code>AIC(Model_hw_1Etel$model)</code></pre>
+<pre><code>## [1] 2076.452</code></pre>
+<pre class="r"><code>accuracy(Model_hw_1Etel)</code></pre>
+<pre><code>##                  ME     RMSE    MAE       MPE     MAPE      MASE
+## Training set -19817 172689.4 137259 -3.310116 10.74612 0.6711232
+##                    ACF1
+## Training set -0.1543248</code></pre>
+</div>
+<div id="holt-winters-multiplicative-model" class="section level5">
+<h5>Holt Winters Multiplicative Model</h5>
+<pre class="r"><code>AIC(Model_hw_2Etel$model)</code></pre>
+<pre><code>## [1] 2071.694</code></pre>
+<pre class="r"><code>accuracy(Model_hw_2Etel)</code></pre>
+<pre><code>##                    ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set 2570.544 154506.4 126050.4 -1.274176 9.741218 0.6163191
+##                    ACF1
+## Training set -0.2582845</code></pre>
+</div>
+<div id="minimizing-the-aic-and-rmse-from-the-models-it-is-clear-that-the-best-model-for-the-totaletel-forecast-is-the-holt-winters-model.-we-can-see-that-the-holt-winters-multiplicative-model-is-marginally-better-than-the-additive-model.-we-assume-this-is-the-case-since-this-is-the-only-model-that-takes-into-account-the-seasonality-changing-proportionally-to-the-level-of-the-data.-whereas-the-additive-model-would-have-been-better-if-the-totaletel-seasonality-would-have-been-roughly-constant-throughout-the-data.-the-total-etel-exports-were-found-to-be-highly-seasonal-so-this-makes-sense.-this-may-be-attributed-to-the-winter-blooming-flower-and-the-demonstrated-correlation-between-the-total-etel-exports-and-the-influential-national-holidays.-our-complete-predicted-forecast-for-2014-total-etel-exports-based-on-the-holt-winters-multiplicative-model-is-as-follows" class="section level5">
+<h5>Minimizing the AIC and RMSE from the models, it is clear that the best model for the “TotalEtel” forecast is the Holt-Winters model. We can see that the Holt-Winters Multiplicative Model is marginally better than the Additive model. We assume this is the case since this is the only model that takes into account the seasonality changing proportionally to the level of the data. Whereas the Additive model would have been better if the “TotalEtel” seasonality would have been roughly constant throughout the data. The Total Etel exports were found to be highly seasonal so this makes sense. This may be attributed to the Winter blooming flower and the demonstrated correlation between the Total Etel Exports and the Influential National Holidays. Our complete predicted forecast for 2014 Total Etel Exports, based on the Holt-Winters Multiplicative Model, is as follows:</h5>
+<pre class="r"><code>Model_hw_2_PointForecastEtel</code></pre>
+<pre><code>##          Jan     Feb     Mar     Apr     May     Jun     Jul     Aug
+## 2014 2134821 2018272 1990076 1517542 1384653 1228015 1105178 1401176
+##          Sep     Oct     Nov     Dec
+## 2014 3067063 2547465 2613831 2325692</code></pre>
+<hr />
+<div id="id-section10"></div>
+</div>
+</div>
+</div>
+<div id="acknowledgements-1" class="section level2">
+<h2>10.0 Acknowledgements</h2>
+<div id="while-this-document-details-the-specific-models-and-data-for-the-totaletel-flowers-all-data-and-code-are-based-off-of-information-provided-in-the-document-entitled-forecasting-exports-chulwalar_0.8a.r.-this-document-can-be-found-in-this-repository-in-the-data-folder." class="section level5">
+<h5>While this document details the specific models and data for the “TotalEtel” flowers all data and code are based off of information provided in the document entitled “Forecasting Exports Chulwalar_0.8a.R”. This document can be found in this repository in the data folder.</h5>
+<p><a href="https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Data/Forecasting%20Exports%20Chulwalar_0.8a.R">/Analysis/Data</a><br> #####We would like to credit the following for their contributions to this document.<br> #####Amy Wheeler<br> #####Nina Weitkamp<br> #####Patrick Berlekamp<br> #####Johannes Brauer<br> #####Andreas Faatz<br> #####Hans-Ulrich Holst<br> #####Designed and coded at Hochschule Osnabrück, Germany<br> #####Contact: <a href="mailto:faatz@wi.hs-osnabrueck.de">faatz@wi.hs-osnabrueck.de</a><br> #####Additionally, we would like to thank: Rob Hyndman for the forecasting libraries in R<br></p>
 </div>
 </div>
 </div>

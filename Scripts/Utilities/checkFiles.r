@@ -1,3 +1,9 @@
+#Created by Joe Stoffa
+#Sometime in June or July 2016
+#Work in progress
+#
+#
+#
 #This script contains a number of functions to ensure that check to see if a plot exists and that it is current.  If the
 #plot in question exists and is current the r script that creates the plot will not be called.
 

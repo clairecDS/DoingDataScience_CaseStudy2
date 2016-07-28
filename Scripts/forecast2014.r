@@ -41,7 +41,7 @@ PointForecast_TrendAndSeasonality_2014 <- ts(Forecast_2014_df$"Point Forecast", 
 
 # Output instruction for the data export of the results for further use in Excel. 
 if(!file.exists("PointForecast_TrendAndSeasonality_2014.csv")) {
-  write.csv(PointForecast_TrendAndSeasonality_2014,file='PointForecast_TrendAndSeasonality_2014.csv')
+  write.csv(PointForecast_TrendAndSeasonality_2014,file='Data/PointForecast_TrendAndSeasonality_2014.csv')
 }
 
 
@@ -62,5 +62,5 @@ PointForecast_2014_alternative <- ts(Forecast_2014_alternative_df$"Point Forecas
 
 # Output instruction for the data export of the results for further use in Excel.
 if(!file.exists("PointForecast_2014_alternative.csv")) {
-  write.csv(PointForecast_2014_alternative,file='PointForecast_2014_alternative.csv')
+  write.csv(PointForecast_2014_alternative,file='Data/PointForecast_2014_alternative.csv')
 }

@@ -1,5 +1,5 @@
 ---
-output: html_document
+output: word_document
 ---
 # Doing Data Science: Case Study 2 - Forecasting Chulwalar Total Etel Exports
 ###Claire Chu & Joseph Stoffa  
@@ -43,8 +43,8 @@ This case study builds on the data analysis and modeling of plant exports from C
 ####---8.1 [Exponential Smoothing](#id-section8.1)
 ####---8.2 [ARIMA](#id-section8.2)
 ####---8.3 [Dynamic Regression Models](#id-section8.3)
-####9.0 [](#id-section9)
-####10.0 [](#id-section10)
+####9.0 [Conclusion](#id-section9)
+####10.0 [Acknowledgements](#id-section10)
 <br>
 
 ****************************
