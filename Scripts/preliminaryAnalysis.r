@@ -4,6 +4,7 @@
 # exist or are not up to date the plots will be reproduced.
 source("Scripts/Utilities/checkFiles.r")
 
+#checks to see if checkFile.csv has been built, checkFile.csv stores when tracked files have been last modified
 if(!file.exists("checkFile.csv")) {
   buildFileList("Plots")
 }

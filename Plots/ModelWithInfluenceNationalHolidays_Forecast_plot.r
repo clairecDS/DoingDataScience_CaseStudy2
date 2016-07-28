@@ -1,0 +1,5 @@
+#Creates ModelWithInfluenceNationalHolidays_Forecast plot
+
+png("Plots/ModelWithInfluenceNationalHolidays_Forecast_plot.png")
+plot(ModelWithInfluenceNationalHolidays_Forecast,main="ModelWithInfluenceNationalHolidays_Forecast")
+dev.off()

@@ -1,0 +1,5 @@
+#Creates ModelWithLowCorrelatingIndicators_Forecast plot
+
+png("Plots/ModelWithLowCorrelatingIndicators_Forecast_plot.png")
+plot(ModelWithLowCorrelatingIndicators_Forecast, main="ModelWithLowCorrelatingIndicators_Forecast")
+dev.off()

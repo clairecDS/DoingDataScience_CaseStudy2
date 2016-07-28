@@ -1,0 +1,16 @@
+#Creates holt master plot
+
+png("Plots/holt_master_plot.png")
+plot(Model_holt_1, plot.conf=FALSE, ylab="Exports Chulwalar  )", xlab="Year", main="", fcol="white", type="o")
+lines(fitted(Model_ses), col="purple", type="o")
+lines(fitted(Model_holt_1), col="blue", type="o")
+lines(fitted(Model_holt_2), col="red", type="o")
+lines(fitted(Model_holt_3), col="green", type="o")
+lines(fitted(Model_holt_4), col="orange", type="o")
+lines(Model_ses$mean, col="purple", type="o")
+lines(Model_holt_1$mean, col="blue", type="o")
+lines(Model_holt_2$mean, col="red", type="o")
+lines(Model_holt_3$mean, col="green", type="o")
+lines(Model_holt_4$mean, col="orange", type="o")
+legend("topleft",lty=1, col=c(1,"purple","blue","red","green","orange"), c("data", "SES","Holts auto", "Exponential", "Additive Damped", "Multiplicative Damped"),pch=1)
+dev.off()
