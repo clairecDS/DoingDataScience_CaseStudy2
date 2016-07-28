@@ -11,7 +11,7 @@ output: html_document
 
 Chulwalar is part of the island group Urbano in the northern hemisphere. They are famous for their plants which flower in winter. There are three main plants that Chulwalar exports: Efak is a leafy bush with white flowers, Wuge is a grass like plant with tiny pink flowers and Etel is a flowering tree. Etel comes in two varieties: red flowers and blue flowers. Due to the nature of the products, exports generally are higher towards the end of the year. Chulwalar celebrates its independence on the 1st of December each year. On this day it is custom to give presents to family and friends. Chulwalar also celebrates the March Equinox as a time of rebirth in the northern hemisphere. 
 
-The Prime Minister of Chulwalar has asked us to help him in forecasting the exports. In order to do this we have been given as is data and plan data as well as a list of indicators which may affect exports. Our job is to find out the best way to forecast Chulwalar's exports in 2014 based on data collected before this year 
+The Prime Minister of Chulwalar has asked [Wheeler et al] to help him in forecasting the exports. In order to do this [Wheeler et al] were given as is data and plan data as well as a list of indicators which may affect exports. The Wheeler group's job is to find out the best way to forecast Chulwalar's exports in 2014 based on data collected before this year 
 <br>
 
 ```{r setup, include=FALSE}
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(fpp)
 ```
 ## Background
-This case study builds on the data analysis and modeling of plant exports from Chulwalar performed by .
+This case study builds on the data analysis and modeling of plant exports from Chulwalar performed by Wheeler et al (outlined in Introduction) in order to find the best model to forecast total Etel exports. 
 
 
 ##Table of Contents
@@ -43,6 +43,8 @@ This case study builds on the data analysis and modeling of plant exports from C
 ####---8.1 [Exponential Smoothing](#id-section8.1)
 ####---8.2 [ARIMA](#id-section8.2)
 ####---8.3 [Dynamic Regression Models](#id-section8.3)
+####9.0 [](#id-section9)
+####10.0 [](#id-section10)
 <br>
 
 ****************************
@@ -842,10 +844,7 @@ The Akaike's Information Criterion(AIC/AICc) or the Bayesian Information Criteri
 
 #####Holt's linear trend method:
 
-# Holt added to the model in order to forecast using trends as well.
-# For this it is necessary to add a beta, which determines the trend.
-# If neither alpha nor beta is stated, both parameters will be optimised
-# using ets(). 
+Holt added to the model in order to forecast using trends as well. For this it is necessary to add a beta, which determines the trend. If neither alpha nor beta is stated, both parameters will be optimised using ets(). 
 
 ``` {r Model_holt_1}
 print(summary(Model_holt_1))
@@ -1015,11 +1014,9 @@ The time series appears much more "stationary".
 
 ####ARIMA modelling
 
-# The values for AIC, AICc and BIC should be minimised.
-# We wil try a range of combinations.
-
-# R uses the maximum likelihood estimation (MLE) in order to decide how good
-# a certain model is. The parameters, which give the most likely model based on the given data, are chosen. Furthermore, R gives the log-likelihood, which should be maximised. 
+The values for AIC, AICc and BIC should be minimised. We wil try a range of combinations.
+<br>
+R uses the maximum likelihood estimation (MLE) in order to decide how good a certain model is. The parameters, which give the most likely model based on the given data, are chosen. Furthermore, R gives the log-likelihood, which should be maximised. 
 
 ```{r Model_ARIMA_1}
 print(summary(Model_ARIMA_1))
@@ -1304,3 +1301,177 @@ print(Model_dynreg_auto.arima_forecast)
 print(Model_dynreg_auto.arima_PointForecast)
 ```
 
+****************************
+<div id='id-section9'/>
+##9.0 Conclusion
+#####SES model
+
+```r
+AIC(Model_sesEtel$model)
+```
+
+```
+## [1] 2188.81
+```
+
+```r
+accuracy(Model_sesEtel)
+```
+
+```
+##                    ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set 17461.77 457693.8 297227.3 -4.846428 21.14544 1.453283
+##                    ACF1
+## Training set 0.02266816
+```
+####Holt model
+
+```r
+AIC(Model_holt_1Etel$model)
+```
+
+```
+## [1] 2193.032
+```
+
+```r
+accuracy(Model_holt_1Etel)
+```
+
+```
+##                     ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set -23016.69 458401.4 311051.9 -7.993243 22.56079 1.520877
+##                    ACF1
+## Training set 0.02160216
+```
+#####Holt Model with Exponential Trend
+
+```r
+AIC(Model_holt_2Etel$model)
+```
+
+```
+## [1] 2226.746
+```
+
+```r
+accuracy(Model_holt_2Etel)
+```
+
+```
+##                    ME   RMSE      MAE       MPE    MAPE     MASE
+## Training set 51092.46 457072 290407.9 -2.258191 20.3863 1.419939
+##                     ACF1
+## Training set 0.004350746
+```
+#####Dampened Holt Model
+
+```r
+AIC(Model_holt_3Etel$model)
+```
+
+```
+## [1] 2194.944
+```
+
+```r
+accuracy(Model_holt_3Etel)
+```
+
+```
+##                    ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set 14074.53 458121.2 299379.3 -5.181928 21.35676 1.463805
+##                    ACF1
+## Training set 0.02356552
+```
+#####Dampened Holt Model with Exponential Trend
+
+```r
+AIC(Model_holt_4Etel$model)
+```
+
+```
+## [1] 2228.461
+```
+
+```r
+accuracy(Model_holt_4Etel)
+```
+
+```
+##                    ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set 46720.45 457308.5 292360.8 -2.502549 20.54122 1.429488
+##                     ACF1
+## Training set 0.007568185
+```
+#####Holt Winters Additive Model
+
+```r
+AIC(Model_hw_1Etel$model)
+```
+
+```
+## [1] 2076.452
+```
+
+```r
+accuracy(Model_hw_1Etel)
+```
+
+```
+##                  ME     RMSE    MAE       MPE     MAPE      MASE
+## Training set -19817 172689.4 137259 -3.310116 10.74612 0.6711232
+##                    ACF1
+## Training set -0.1543248
+```
+#####Holt Winters Multiplicative Model
+
+```r
+AIC(Model_hw_2Etel$model)
+```
+
+```
+## [1] 2071.694
+```
+
+```r
+accuracy(Model_hw_2Etel)
+```
+
+```
+##                    ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set 2570.544 154506.4 126050.4 -1.274176 9.741218 0.6163191
+##                    ACF1
+## Training set -0.2582845
+```
+
+#####Minimizing the AIC and RMSE from the models, it is clear that the best model for the "TotalEtel" forecast is the Holt-Winters model. We can see that the Holt-Winters Multiplicative Model is marginally better than the Additive model. We assume this is the case since this is the only model that takes into account the seasonality changing proportionally to the level of the data. Whereas the Additive model would have been better if the "TotalEtel" seasonality would have been roughly constant throughout the data. The Total Etel exports were found to be highly seasonal so this makes sense. This may be attributed to the Winter blooming flower and the demonstrated correlation between the Total Etel Exports and the Influential National Holidays. Our complete predicted forecast for 2014 Total Etel Exports, based on the Holt-Winters Multiplicative Model, is as follows:
+
+
+```r
+Model_hw_2_PointForecastEtel
+```
+
+```
+##          Jan     Feb     Mar     Apr     May     Jun     Jul     Aug
+## 2014 2134821 2018272 1990076 1517542 1384653 1228015 1105178 1401176
+##          Sep     Oct     Nov     Dec
+## 2014 3067063 2547465 2613831 2325692
+```
+
+****************************
+<div id='id-section10'/>
+##10.0 Acknowledgements
+
+#####While this document details the specific models and data for the "TotalEtel" flowers all data and code are based off of information provided in the document entitled "Forecasting Exports Chulwalar_0.8a.R". This document can be found in this repository in the data folder.
+[/Analysis/Data](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Data/Forecasting%20Exports%20Chulwalar_0.8a.R)<br>
+#####We would like to credit the following for their contributions to this document.<br>
+#####Amy Wheeler<br>
+#####Nina Weitkamp<br>
+#####Patrick Berlekamp<br>
+#####Johannes Brauer<br>
+#####Andreas Faatz<br>
+#####Hans-Ulrich Holst<br>
+#####Designed and coded at Hochschule Osnabrück, Germany<br>
+#####Contact: faatz@wi.hs-osnabrueck.de<br>
+#####Additionally, we would like to thank: Rob Hyndman for the forecasting libraries in R<br>

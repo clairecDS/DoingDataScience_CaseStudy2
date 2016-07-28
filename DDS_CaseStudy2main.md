@@ -5576,8 +5576,8 @@ Model_hw_2_PointForecastEtel
 ######write.csv(Model_hw_2_PointForecast,file='Model_hw_2_PointForecast.csv')
 
 ****************************
-<div id='id-section8.0'/>
-###8.0 Conclusion
+<div id='id-section9'/>
+##9.0 Conclusion
 #####SES model
 
 ```r
@@ -5735,7 +5735,7 @@ Model_hw_2_PointForecastEtel
 
 ****************************
 <div id='id-section9.0'/>
-###9.0 Acknowledgements
+##10.0 Acknowledgements
 
 #####While this document details the specific models and data for the "TotalEtel" flowers all data and code are based off of information provided in the document entitled "Forecasting Exports Chulwalar_0.8a.R". This document can be found in this repository in the data folder.
 [/Analysis/Data](https://github.com/clairecDS/DoingDataScience_CaseStudy2/blob/master/Data/Forecasting%20Exports%20Chulwalar_0.8a.R)<br>

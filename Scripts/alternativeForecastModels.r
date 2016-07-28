@@ -146,10 +146,10 @@ Model_hw_2_PointForecast <- ts(Model_hw_2_df$"Point Forecast", start=c(2014,1), 
 
 
 if(!file.exists("Model_hw_1_PointForecast.csv")) {
-write.csv(Model_hw_1_PointForecast,file='Model_hw_1_PointForecast.csv')
+write.csv(Model_hw_1_PointForecast,file='Data/Model_hw_1_PointForecast.csv')
 }
 if(!file.exists("Model_hw_2_PointForecast.csv")) {
-  write.csv(Model_hw_2_PointForecast,file='Model_hw_2_PointForecast.csv')
+  write.csv(Model_hw_2_PointForecast,file='Data/Model_hw_2_PointForecast.csv')
 }
 
 ####Innovations state space models for exponential smoothing
@@ -187,7 +187,7 @@ Model_ets_PointForecast <- ts(Model_ets_forecast_df$"Point Forecast", start=c(20
 
 # Output instruction for the data export of the results for further use in Excel.
 if(!file.exists("Model_ets_PointForecast.csv")) {
-  write.csv(Model_ets_PointForecast,file='Model_ets_PointForecast.csv')
+  write.csv(Model_ets_PointForecast,file='Data/Model_ets_PointForecast.csv')
 }
 
 
@@ -496,8 +496,11 @@ Model_auto.arima_forecast_df <-as.data.frame(Model_auto.arima_forecast)
 Model_auto.arima_PointForecast <- ts(Model_auto.arima_forecast_df$"Point Forecast", start=c(2014,1), end=c(2014,12), frequency=12)
 
 
-# Output instruction for the data export of the results for further use in Excel.
-#write.csv(Model_auto.arima_PointForecast,file='Model_auto.arima_PointForecast.csv')
+#Output instruction for the data export of the results for further use in Excel.
+
+if(!file.exists('Data/Model_auto.arima_PointForecast.csv')) {
+  write.csv(Model_auto.arima_PointForecast,file="Data/Model_auto.arima_PointForecast.csv")
+}
 
 ###8.3 Dynamic regression models
 
@@ -543,5 +546,8 @@ Model_dynreg_auto.arima_PointForecast <- ts(Model_dynreg_auto.arima_forecast_df$
 
 # Output instruction for the data export of the results for further use in Excel.
 if(!file.exists("Model_dynreg_auto.arima_PointForecast.csv")) {
-  write.csv(Model_dynreg_auto.arima_PointForecast,file='Model_dynreg_auto.arima_PointForecast.csv')
+  write.csv(Model_dynreg_auto.arima_PointForecast,file='Data/Model_dynreg_auto.arima_PointForecast.csv')
 }
+
+#last script updates the checkFile
+buildFileList("Plots")
